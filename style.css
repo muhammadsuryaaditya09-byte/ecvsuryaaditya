@@ -1075,6 +1075,59 @@ footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0
         font-size: .65rem;
     }
 }
+    .bar { gap: 8px; }
+    #menu { display: block; }
+    nav ul { flex-direction: column; padding: 10px 24px 18px; gap: 12px; }
+    nav a { display: block; padding: 12px 0 !important; font-size: 1rem !important; }
+    nav a::after { bottom: 6px; }
+    .logo { display: inline-block !important; font-size: 1.4rem !important; margin-right: auto; }
+    .logo br { display: none; }
+    .bar { justify-content: space-between; }
+    .pdf-download { padding: 9px 10px; font-size: .65rem; }
+    .modebtn { padding: 0 10px; font-size: .65rem; }
+
+    /* Hero Mobile */
+    section { padding: 50px 0; }
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; gap: 0; align-items: stretch; }
+    .copy { grid-area: auto; padding: 30px 0 0; text-align: center; }
+    .hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem) !important; line-height: 1.1 !important; margin-bottom: 15px !important; }
+    .role { max-width: 100% !important; font-size: 1rem !important; text-align: center; margin: 10px auto 20px !important; }
+    .sum { font-size: 0.95rem !important; text-align: center; margin: 0 auto 20px !important; }
+    .cta { justify-content: center !important; gap: 12px !important; }
+    .btn, .down { transform: none !important; }
+
+    /* Foto Mobile */
+    .hero .photo { transform: none !important; height: 300px !important; width: 300px !important; margin: 20px auto !important; align-self: center !important; }
+    .hero .photo::after { opacity: 0.6 !important; } /* Lebih terang di HP */
+    .hero .photo:active::after { opacity: 0 !important; } /* Efek sentuh */
+    .hero .photo:active { transform: scale(0.98) !important; box-shadow: 0 0 20px rgba(201, 243, 29, 0.8) !important; }
+
+    /* Sidebar Mobile (Tumpuk biasa) */
+    .side { grid-area: auto; padding: 20px 0 40px; text-align: left; }
+    .sb { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; }
+
+    /* About Mobile */
+    .about { grid-template-columns: 1fr; gap: 30px; }
+    .lead { font-size: 1.3rem; }
+    .facts > div { padding: 15px 0; }
+
+    /* Timeline Mobile */
+    .tl li { grid-template-columns: 1fr; gap: 5px; padding: 20px 0; }
+    .tl .yr { grid-row: auto; font-size: 0.9rem; }
+
+    /* Portfolio & Certs Mobile */
+    .proj, .certs { grid-template-columns: 1fr; gap: 20px; }
+    .cover { height: 160px; }
+    .pb { padding: 20px; }
+
+    /* Contact Mobile */
+    .ct li { flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px 0; }
+    .ct b { min-width: 0; font-size: 1.5rem; }
+    .ct span { min-width: 0; font-size: 0.9rem; }
+    
+    /* Sembunyikan kursor custom */
+    #cur, #cur-dot { display: none !important; }
+
 /* =========================================================
    TAMBAHAN EFEK INTERAKTIF (HOVER) UNTUK MOBILE
    ========================================================= */
