@@ -124,7 +124,7 @@ const DATA = {
             rank: "JUARA 3",
             title: "Liga 3 Jawa Barat",
             club: "PSGC Ciamis",
-            image: "images/juara3.jpeg",
+            image: "images/Juara3.jpeg",
             description: "Meraih posisi juara ketiga dalam kompetisi Liga 3 Jawa Barat bersama PSGC Ciamis."
         },
 
@@ -133,7 +133,7 @@ const DATA = {
             rank: "PERINGKAT 4",
             title: "Liga 4 Jawa Barat",
             club: "Pesik Kuningan",
-            image: "images/peringkat4.jpeg",
+            image: "images/Peringkat4.jpeg",
             description: "Berhasil mencapai peringkat keempat dalam kompetisi Liga 4 Jawa Barat."
         },
 
@@ -142,7 +142,7 @@ const DATA = {
             rank: "JUARA 1",
             title: "Liga 4 Seri Kuningan",
             club: "Diklat Sepak Bola Kuningan",
-            image: "images/juara1.jpeg",
+            image: "images/Juara1.jpeg",
             description: "Meraih posisi juara pertama dalam kompetisi Liga 4 Seri Kuningan."
         }
 
@@ -174,14 +174,14 @@ const DATA = {
             title: "Sertifikat Inklusi Pasar Modal",
             issuer: "Penerbit sertifikat",
             year: "2024",
-            image: "images/sertifikat Inklusi Pasar Modal.png",
+            image: "images/sertifikat inklusi pasar modal.png",
             url: ""
         },
         {
             title: "Sertifikat Software Engineering",
             issuer: "Penerbit sertifikat",
             year: "2026",
-            image: "images/sertifikat software.png",
+            image: "images/Sertifikat software.png",
             url: ""
         }
         
