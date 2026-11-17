@@ -1016,7 +1016,7 @@ if (printPdf) {
         const link = document.createElement("a");
 
         link.href = DATA.cvPdf;
-        link.download = "CV Muhammad Surya Aditya.pdf";
+        link.download = "cvsurya.pdf";
 
         document.body.appendChild(link);
 
