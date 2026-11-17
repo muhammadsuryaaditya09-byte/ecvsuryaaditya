@@ -1123,3 +1123,80 @@ footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0
         transition: all 0.2s ease !important;
     }
 }
+/* =========================================================
+   MOBILE NAVBAR: MENU DI KANAN
+   ========================================================= */
+
+@media (max-width: 900px) {
+    /* 1. Sembunyikan tombol balik warna di HP agar hemat tempat */
+    .modebtn {
+        display: none !important;
+    }
+
+    /* 2. Atur ulang flexbox bar agar logo di kiri, menu di kanan */
+    .bar {
+        justify-content: space-between;
+        padding: 0 15px; /* Jarak aman di pinggir layar */
+    }
+
+    /* 3. Tampilkan tombol hamburger di kanan */
+    #menu {
+        display: block !important;
+        margin-left: auto; /* Mendorong tombol ke paling kanan */
+        background: transparent;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+        font-size: 1.5rem;
+        width: 44px;
+        height: 44px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    /* 4. Atur tampilan menu dropdown (saat dibuka) */
+    nav {
+        position: absolute;
+        top: 100%; /* Muncul tepat di bawah header */
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 3px solid var(--ink);
+        max-height: 0; /* Tersembunyi secara default */
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Class aktif saat tombol diklik (diatur oleh JS) */
+    nav.open {
+        max-height: 480px; /* Tinggi maksimal dropdown */
+    }
+
+    /* 5. Rapikan daftar menu agar rata kanan/kiri */
+    nav ul {
+        flex-direction: column; /* Menu berderet ke bawah */
+        align-items: flex-end; /* Teks menu rata kanan */
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 1.1rem !important;
+        padding: 10px 0 !important;
+        display: block;
+        text-align: right; /* Teks rata kanan */
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* 6. Tombol Download CV di Dropdown Mobile */
+    /* Karena tadi tombolnya kita sembunyikan di navbar atas, kita munculkan di sini */
+    .pdf-download {
+        display: flex !important; 
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        height: 40px !important;
+        font-size: 0.8rem !important;
+    }
+}
