@@ -1027,39 +1027,4 @@ if (printPdf) {
     });
 
 }
-// ==========================================
-// LOGIKA SIDEBAR MOBILE
-// ==========================================
-document.addEventListener("DOMContentLoaded", function() {
-    const btnOpen = document.getElementById("openSidebar");
-    const btnClose = document.getElementById("closeSidebar");
-    const sidebar = document.getElementById("sidebar");
-    
-    // Buat elemen overlay gelap secara otomatis
-    const overlay = document.createElement("div");
-    overlay.className = "side-overlay";
-    document.body.appendChild(overlay);
 
-    if (btnOpen && btnClose && sidebar) {
-        // Buka sidebar
-        btnOpen.addEventListener("click", function() {
-            sidebar.classList.add("active");
-            overlay.classList.add("active");
-            document.body.style.overflow = "hidden"; // Kunci scroll background
-        });
-
-        // Tutup sidebar lewat tombol X
-        btnClose.addEventListener("click", function() {
-            sidebar.classList.remove("active");
-            overlay.classList.remove("active");
-            document.body.style.overflow = "";
-        });
-
-        // Tutup sidebar kalau area gelap diklik
-        overlay.addEventListener("click", function() {
-            sidebar.classList.remove("active");
-            overlay.classList.remove("active");
-            document.body.style.overflow = "";
-        });
-    }
-});
