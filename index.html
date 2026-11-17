@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <meta name="description" content="e-CV mahasiswa">
+    <meta name="theme-color" content="#0b4a5e">
+
+    <title>e-CV | Nama Lengkap</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <noscript>
+        <p class="note">
+            Halaman ini membutuhkan JavaScript untuk menampilkan isi e-CV.
+        </p>
+    </noscript>
+
+    <div class="note" id="note">
+        <span>Ini data contoh. Ubah isinya di file data.js.</span>
+        <button type="button" id="noteX">Tutup</button>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="wrap bar">
+
+            <a class="logo" href="#home">e-CV</a>
+
+            <button
+                type="button"
+                id="mode"
+                class="modebtn"
+                aria-pressed="false"
+            >
+                Balik warna
+            </button>
+
+            <button
+                id="menu"
+                type="button"
+                aria-label="Buka menu"
+                aria-expanded="false"
+                aria-controls="nav"
+            >
+                &#9776;
+            </button>
+
+            <nav id="nav" aria-label="Navigasi utama">
+                <ul>
+                    <li><a href="#home" lang="en">Home</a></li>
+                    <li><a href="#about" lang="en">About</a></li>
+                    <li><a href="#education" lang="en">Education</a></li>
+                    <li><a href="#skills" lang="en">Skills</a></li>
+                    <li><a href="#experience" lang="en">Experience</a></li>
+                    <li><a href="#portfolio" lang="en">Portfolio</a></li>
+                    <li><a href="#achievements" lang="en">Achievements</a></li>
+                    <li><a href="#certificates" lang="en">Certificates</a></li>
+                    <li><a href="#contact" lang="en">Contact</a></li>
+
+                    <li>
+                        <a
+                            href="images/cvsurya.pdf"
+                            download="cvsurya.pdf"
+                            class="pdf-download"
+                            title="Download CV dalam format PDF"
+                        >
+                            Download CV
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="prog"></div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HOME / HERO -->
+        <section class="hero" id="home">
+
+            <div class="wrap">
+
+                <div class="copy">
+
+                    <p class="status" id="status" hidden>
+                        <i aria-hidden="true"></i>
+                        <span></span>
+                    </p>
+
+                    <span class="hline" aria-hidden="true"></span>
+
+                    <p class="hello">
+                        <span id="hello">Halo, saya</span>
+                    </p>
+
+                    <!-- PERBAIKAN: Tag h1 dirapikan, span dipindah ke dalam -->
+                    <h1 id="name">
+                        <span>Saya</span>
+                        <span>Adalah</span>
+                    </h1>
+
+                    <p class="role" id="role" hidden></p>
+
+                    <p class="sum" id="headline"></p>
+
+                    <div class="cta">
+
+                        <a
+                            class="down"
+                            href="#about"
+                            aria-label="Gulir ke bagian About"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="m6 9 6 6 6-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="3"
+                                />
+                            </svg>
+                        </a>
+
+                        <a
+                            class="btn"
+                            href="https://wa.me/6285523618848?text=Halo%20Surya,%20saya%20ingin%20menghubungi%20Anda."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Hubungi saya
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="photo" id="photo">
+
+                    <div class="frame" id="frame">
+                        <span class="ph" id="ph"></span>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="pick"
+                        title="Hanya pratinjau. Untuk foto tetap, isi photo di data.js."
+                    >
+                        Pratinjau foto
+                    </button>
+
+                    <input
+                        type="file"
+                        id="file"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </div>
+
+                <aside class="side" aria-label="Ringkasan profil">
+
+                    <div class="sb">
+
+                        <h2 class="sl">Tentang saya</h2>
+
+                        <p id="sideAbout"></p>
+
+                        <a class="lk" href="#about">
+                            Selengkapnya
+
+                            <svg
+                                viewBox="0 0 16 10"
+                                width="16"
+                                height="10"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M0 5h14M10 1l4 4-4 4"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                    <div class="sb" id="workBox">
+
+                        <h2 class="sl">Karya saya</h2>
+
+                        <p id="sideWork"></p>
+
+                        <a class="lk" href="#portfolio">
+                            Lihat portofolio
+
+                            <svg
+                                viewBox="0 0 16 10"
+                                width="16"
+                                height="10"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M0 5h14M10 1l4 4-4 4"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                />
+                            </svg>
+                        </a>
+
+                    </div>
+
+                    <div class="sb">
+
+                        <h2 class="sl">Ikuti saya</h2>
+
+                        <div class="soc-row" id="socials"></div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marq" aria-hidden="true">
+            <div class="track" id="marq"></div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">About Me</h2>
+
+                <div class="about rv">
+
+                    <p class="lead" id="bio"></p>
+
+                    <div class="facts">
+
+                        <div>
+                            <h3>Minat</h3>
+                            <p id="interest"></p>
+                        </div>
+
+                        <div>
+                            <h3>Keahlian utama</h3>
+                            <ul id="mainSkill"></ul>
+                        </div>
+
+                        <div class="goal">
+                            <h3>Tujuan karier</h3>
+                            <p id="goal"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="alt">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Education</h2>
+
+                <ol class="tl stg" id="edu"></ol>
+
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Skills</h2>
+
+                <div class="rv">
+
+                    <div
+                        class="tabs"
+                        role="tablist"
+                        aria-label="Jenis keterampilan"
+                    >
+
+                        <button
+                            type="button"
+                            role="tab"
+                            id="t-hard"
+                            aria-selected="true"
+                            aria-controls="chips"
+                            lang="en"
+                        >
+                            Hard skills
+                        </button>
+
+                        <button
+                            type="button"
+                            role="tab"
+                            id="t-soft"
+                            aria-selected="false"
+                            aria-controls="chips"
+                            lang="en"
+                        >
+                            Soft skills
+                        </button>
+
+                    </div>
+
+                    <p class="skillnote" id="skillNote"></p>
+
+                    <div
+                        class="chips"
+                        id="chips"
+                        role="tabpanel"
+                        aria-live="polite"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="alt">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Experience</h2>
+
+                <ol class="tl rv" id="exp"></ol>
+
+            </div>
+
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Portfolio</h2>
+
+                <div class="proj stg" id="proj"></div>
+
+            </div>
+
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section id="achievements">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Achievements</h2>
+
+                <p class="achievement-intro rv">
+                    Beberapa pencapaian dan pengalaman kompetisi
+                    yang menjadi bagian dari perjalanan saya.
+                </p>
+
+                <div class="certs stg achievements" id="achievementsList"></div>
+
+            </div>
+
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="alt">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Certificates</h2>
+
+                <div class="certs stg" id="certs"></div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <div class="wrap">
+
+                <h2 class="title rv" lang="en">Contact</h2>
+
+                <ul class="ct stg" id="ct"></ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="wrap" id="foot"></div>
+
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <dialog id="lb" class="lb" aria-label="Pratinjau sertifikat">
+
+        <div class="lbin">
+
+            <img
+                id="lbImg"
+                alt=""
+                width="900"
+                height="650"
+            >
+
+            <p id="lbCap"></p>
+
+            <button type="button" class="btn" id="lbX">
+                Tutup
+            </button>
+
+        </div>
+
+    </dialog>
+
+    <!-- CURSOR DAN TOAST -->
+    <div id="cur" aria-hidden="true"></div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+
+
+</body>
+</html>
