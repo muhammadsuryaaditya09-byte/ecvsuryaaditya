@@ -1070,3 +1070,56 @@ footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0
     /* Sembunyikan kursor custom */
     #cur, #cur-dot { display: none !important; }
 }
+/* =========================================================
+   TAMBAHAN EFEK INTERAKTIF (HOVER) UNTUK MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    /* 1. Efek Sentuh pada Foto Profil */
+    .hero .photo:active {
+        transform: scale(0.95) !important; /* Efek membal saat disentuh */
+        box-shadow: 0 0 25px rgba(201, 243, 29, 0.8) !important;
+        transition: all 0.2s ease !important;
+    }
+    .hero .photo:active::after {
+        opacity: 0 !important; /* Kaca buram hilang saat disentuh */
+    }
+
+    /* 2. Efek Sentuh pada Tombol (Hubungi Saya / Download CV) */
+    .btn:active, .pdf-download:active, .down:active {
+        transform: scale(0.95) !important;
+        box-shadow: 0 2px 0 var(--sh) !important;
+        transition: all 0.1s ease !important;
+    }
+
+    /* 3. Efek Sentuh pada Kartu Portofolio / Sertifikat */
+    .pc:active, .cc:active {
+        transform: scale(0.98) !important; /* Sedikit mengecil */
+        box-shadow: 4px 4px 0 var(--sh) !important; /* Bayangan jadi lebih dekat */
+        border-color: var(--lime) !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    /* 4. Efek Sentuh pada Link Sidebar (Selengkapnya / Lihat Portofolio) */
+    .lk:active {
+        background-size: 100% 100% !important;
+        color: var(--lime) !important;
+        gap: 14px !important;
+        transition: all 0.2s ease !important;
+    }
+
+    /* 5. Efek Sentuh pada Menu Navigasi (Atas) */
+    nav a:active {
+        opacity: 1 !important;
+        color: var(--lime) !important;
+    }
+    
+    /* 6. Efek Sentuh pada Ikon Sosial Media */
+    .soc:active {
+        background: var(--lime) !important;
+        color: var(--pd) !important;
+        border-color: var(--lime) !important;
+        transform: translateY(-3px) !important;
+        transition: all 0.2s ease !important;
+    }
+}
