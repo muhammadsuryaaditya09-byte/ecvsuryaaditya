@@ -3273,3 +3273,63 @@ footer .bigname {
     transform: translateY(10px) !important; /* <--- UBAH ANGKA INI */
     z-index: 1 !important;              
 }
+/* =========================================================
+   FIX TAMPILAN MOBILE (HP) - RAPI & INTERAKTIF
+   ========================================================= */
+
+@media (max-width: 900px) {
+    /* 1. Rapikan posisi foto di HP (tengah & proporsional) */
+    .hero .photo {
+        transform: none !important; /* Matikan efek naik-turun di HP */
+        height: 320px !important;
+        width: 320px !important;
+        margin: 20px auto 30px auto !important; /* Tengahkan foto */
+        align-self: center !important;
+    }
+
+    /* 2. Teks Nama & Deskripsi di HP */
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem) !important; /* Sesuaikan ukuran font */
+        line-height: 1.1 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .role {
+        max-width: 100% !important;
+        font-size: 1rem !important;
+    }
+
+    .sum {
+        font-size: 0.95rem !important;
+        text-align: justify !important;
+    }
+
+    /* 3. Efek Foto di HP (Karena tidak ada hover, kita buat efek sentuh/active) */
+    .hero .photo::after {
+        opacity: 0.5 !important; /* Awalnya agak gelap (tapi jangan terlalu gelap) */
+    }
+
+    .hero .photo:active::after {
+        opacity: 0 !important; /* Saat layar disentuh, foto jadi terang */
+    }
+    
+    .hero .photo:active {
+        transform: scale(0.98) !important; /* Efek tombol ditekan */
+        box-shadow: 0 0 20px rgba(201, 243, 29, 0.8) !important;
+    }
+
+    /* 4. Rapikan tombol CTA di HP */
+    .cta {
+        justify-content: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .btn, .down {
+        transform: none !important; /* Matikan efek geser di HP */
+    }
+
+    /* 5. Sembunyikan kursor custom di HP (jika ada) */
+    #cur, #cur-dot {
+        display: none !important;
+    }
+}
