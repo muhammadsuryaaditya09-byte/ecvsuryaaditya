@@ -1144,11 +1144,7 @@ footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0
     }
 
     /* 2. Efek Sentuh pada Tombol (Hubungi Saya / Download CV) */
-    .btn:active, .pdf-download:active, .down:active {
-        transform: scale(0.95) !important;
-        box-shadow: 0 2px 0 var(--sh) !important;
-        transition: all 0.1s ease !important;
-    }
+
 
     /* 3. Efek Sentuh pada Kartu Portofolio / Sertifikat */
     .pc:active, .cc:active {
