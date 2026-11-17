@@ -617,7 +617,7 @@ footer { padding: 34px 0; border-top: 3px solid var(--ink); color: var(--mute); 
 
 @keyframes zoom { from { opacity: 0; transform: translateY(24px); } }
 
-@media (hover: hover) {
+@media (hover: hover), (min-width: 901px) {
     .logo:hover { transform: skewX(-8deg) scale(1.05); }
     .btn:hover { background: var(--bg); color: var(--ink); border-color: var(--ink); box-shadow: 6px 6px 0 var(--sh); transform: translate(-3px, -3px); }
     .btn.ghost:hover { background: var(--ink); color: var(--bg); box-shadow: 6px 6px 0 var(--sh); }
@@ -761,7 +761,7 @@ header { border-bottom: 1px solid rgba(5, 44, 57, .20); }
 .soc svg { width: 18px; height: 18px; }
 .soc.off { opacity: .4; }
 
-@media (hover: hover) {
+@media (hover: hover), (min-width: 901px) {
     .down:hover { scale: 1.1; translate: 0 4px; }
     .lk:hover { background-size: 100% 100%; color: var(--tink); gap: 14px; }
     .soc:not(.off):hover { background: var(--tbg); color: var(--tink); border-color: var(--tbg); translate: 0 -5px; }
@@ -847,7 +847,7 @@ header { color: var(--ink); }
 .hero h1 .magnetic-letter { display: inline-block; position: relative; background: transparent !important; color: inherit !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; transform: translate3d(var(--move-x, 0px), var(--move-y, 0px), 0); transition: transform .35s cubic-bezier(.22, 1, .36, 1), color .3s ease; will-change: transform; cursor: default; }
 .hero h1 > span:first-child { color: var(--ice) !important; }
 .hero h1 > span:nth-child(2) { color: var(--lime) !important; }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine), (min-width: 901px) {
     .hero h1 .magnetic-letter:hover { transform: translate3d(var(--move-x, 0px), calc(var(--move-y, 0px) - 12px), 0) rotate(-7deg) scale(1.16); color: var(--lime) !important; z-index: 5; }
     .hero h1 > span:nth-child(2) .magnetic-letter:hover { color: var(--ice) !important; }
 }
@@ -857,7 +857,7 @@ header { color: var(--ink); }
 /* FIX WARNA NAMA */
 .hero h1 > span:first-child, .hero h1 > span:first-child .magnetic-letter { color: var(--ink) !important; }
 .hero h1 > span:nth-child(2), .hero h1 > span:nth-child(2) .magnetic-letter { color: var(--lime) !important; }
-@media (hover: hover) and (pointer: fine) { .hero h1 .magnetic-letter:hover { color: var(--lime) !important; } }
+@media (hover: hover) and (pointer: fine), (min-width: 901px) { .hero h1 .magnetic-letter:hover { color: var(--lime) !important; } }
 
 /* ACHIEVEMENTS */
 .achievement-intro { max-width: 650px; margin: -10px 0 35px; color: var(--mute); }
@@ -1105,4 +1105,22 @@ footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0
         transform: translateY(0);
         box-shadow: none;
     }
+}
+
+/* =========================================================
+   PATCH: HOVER FOTO HERO DI MODE DESKTOP
+   Penyebab: .copy (grid-area 1/1/2/3, z-index 2) menutupi kolom foto,
+   jadi mouse kena .copy, bukan .photo. Solusi: area .copy tidak
+   menangkap mouse, hanya isi yang interaktif yang tetap bisa diklik.
+   ========================================================= */
+@media (min-width: 901px) {
+    .copy { pointer-events: none; }
+    .copy a,
+    .copy button,
+    .copy .btn,
+    .copy .down,
+    .copy .magnetic-letter,
+    .copy input,
+    .copy select,
+    .copy textarea { pointer-events: auto; }
 }
