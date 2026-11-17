@@ -105,22 +105,15 @@ body::before {
     z-index: 60;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: var(--fd);
     margin: 0;
     text-transform: uppercase;
     line-height: 1;
 }
 
-p {
-    margin: 0;
-}
-
-a {
-    color: inherit;
-}
+p { margin: 0; }
+a { color: inherit; }
 
 :focus-visible {
     outline: 3px solid var(--ink);
@@ -141,9 +134,7 @@ button {
     position: relative;
 }
 
-section {
-    padding: 96px 0;
-}
+section { padding: 96px 0; }
 
 .title {
     display: inline-block;
@@ -252,8 +243,7 @@ nav a {
     letter-spacing: .08em;
 }
 
-.modebtn,
-#menu {
+.modebtn, #menu {
     border: 2px solid var(--ink);
     background: var(--bg);
     padding: 8px 16px;
@@ -263,8 +253,7 @@ nav a {
     transition: background .2s, color .2s, translate .35s cubic-bezier(.2, .9, .2, 1);
 }
 
-.modebtn:hover,
-#menu:hover {
+.modebtn:hover, #menu:hover {
     background: var(--ink);
     color: var(--bg);
 }
@@ -301,21 +290,9 @@ nav a {
     transition: transform .25s, box-shadow .25s, background .25s, color .25s, border-color .25s, translate .35s cubic-bezier(.2, .9, .2, 1);
 }
 
-.btn.ghost {
-    background: var(--bg);
-    color: var(--ink);
-    border-color: var(--ink);
-}
-
-.btn:active {
-    transform: none;
-    box-shadow: none;
-}
-
-.btn:disabled {
-    opacity: .4;
-    cursor: not-allowed;
-}
+.btn.ghost { background: var(--bg); color: var(--ink); border-color: var(--ink); }
+.btn:active { transform: none; box-shadow: none; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
 
 .hero {
     padding: 76px 0 90px;
@@ -340,11 +317,7 @@ nav a {
     margin-bottom: 26px;
 }
 
-.hello span {
-    display: inline-block;
-    opacity: 0;
-    animation: in .7s .1s forwards;
-}
+.hello span { display: inline-block; opacity: 0; animation: in .7s .1s forwards; }
 
 .hero h1 {
     font-weight: 900;
@@ -356,7 +329,6 @@ nav a {
     overflow-wrap: anywhere;
 }
 
-/* PERBAIKAN: Span di dalam h1 ditumpuk ke bawah agar Aditya turun */
 .hero h1 span {
     display: block;
     background: transparent;
@@ -368,11 +340,7 @@ nav a {
     transition: background .25s, color .25s, -webkit-text-stroke-color .25s;
 }
 
-@keyframes wipe {
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-}
+@keyframes wipe { to { clip-path: inset(0 0 0 0); } }
 
 .sum {
     max-width: 38ch;
@@ -392,16 +360,7 @@ nav a {
     animation: in .8s .75s forwards;
 }
 
-@keyframes in {
-    from {
-        transform: translateY(16px);
-    }
-
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
+@keyframes in { from { transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
 .photo {
     position: relative;
@@ -452,9 +411,7 @@ nav a {
     letter-spacing: -.03em;
 }
 
-.frame::after,
-.cover::after,
-.thumb::after {
+.frame::after, .cover::after, .thumb::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -474,10 +431,7 @@ nav a {
     border-block: 3px solid var(--pd);
 }
 
-.track {
-    display: inline-flex;
-    will-change: transform;
-}
+.track { display: inline-flex; will-change: transform; }
 
 .track span {
     font: 900 1.5rem var(--fd);
@@ -487,109 +441,44 @@ nav a {
     padding: 0 26px;
 }
 
-.track span::after {
-    content: "/";
-    margin-left: 52px;
-    opacity: .5;
-}
+.track span::after { content: "/"; margin-left: 52px; opacity: .5; }
 
-.about {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 56px;
-}
+.about { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; }
 
-.lead {
-    font-size: 1.7rem;
-    line-height: 1.3;
-    font-weight: 700;
-    letter-spacing: -.01em;
-}
+.lead { font-size: 1.7rem; line-height: 1.3; font-weight: 700; letter-spacing: -.01em; }
 
-.facts {
-    display: grid;
-    gap: 0;
-}
+.facts { display: grid; gap: 0; }
 
-.facts>div {
-    border-top: 3px solid var(--ink);
-    padding: 18px 0 22px;
-}
+.facts>div { border-top: 3px solid var(--ink); padding: 18px 0 22px; }
 
-.facts h3 {
-    font-size: .95rem;
-    font-weight: 800;
-    letter-spacing: .14em;
-    margin-bottom: 8px;
-}
+.facts h3 { font-size: .95rem; font-weight: 800; letter-spacing: .14em; margin-bottom: 8px; }
 
-.facts p,
-.facts li {
-    color: var(--mute);
-}
+.facts p, .facts li { color: var(--mute); }
 
-.facts ul {
-    margin: 0;
-    padding-left: 20px;
-}
+.facts ul { margin: 0; padding-left: 20px; }
 
-.facts li {
-    transition: translate .25s, color .25s;
-}
+.facts li { transition: translate .25s, color .25s; }
 
-.tl {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 3px solid var(--ink);
-}
+.tl { list-style: none; margin: 0; padding: 0; border-bottom: 3px solid var(--ink); }
 
-@property --r {
-    syntax: "<length>";
-    inherits: false;
-    initial-value: 0px;
-}
+@property --r { syntax: "<length>"; inherits: false; initial-value: 0px; }
 
-.tl li,
-.ct li {
+.tl li, .ct li {
     --r: 0px;
     border-top: 3px solid var(--ink);
     background: radial-gradient(circle at var(--px, 0px) var(--py, 50%), var(--ink) var(--r), transparent calc(var(--r) + 1px)) no-repeat;
     transition: --r .75s cubic-bezier(.2, .8, .2, 1), color .3s .1s, padding .4s cubic-bezier(.2, .8, .2, 1);
 }
 
-.tl li {
-    display: grid;
-    grid-template-columns: 210px 1fr;
-    gap: 4px 32px;
-    padding: 26px 0;
-}
+.tl li { display: grid; grid-template-columns: 210px 1fr; gap: 4px 32px; padding: 26px 0; }
 
-.tl .yr {
-    grid-row: span 2;
-    font: 800 1rem var(--fd);
-    letter-spacing: .06em;
-    text-transform: uppercase;
-}
+.tl .yr { grid-row: span 2; font: 800 1rem var(--fd); letter-spacing: .06em; text-transform: uppercase; }
 
-.tl h3 {
-    font-size: 1.6rem;
-    font-weight: 900;
-    letter-spacing: -.02em;
-}
+.tl h3 { font-size: 1.6rem; font-weight: 900; letter-spacing: -.02em; }
 
-.tl p {
-    color: var(--mute);
-    max-width: 60ch;
-    transition: color .3s;
-}
+.tl p { color: var(--mute); max-width: 60ch; transition: color .3s; }
 
-.tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 34px;
-    flex-wrap: wrap;
-}
+.tabs { display: flex; gap: 10px; margin-bottom: 34px; flex-wrap: wrap; }
 
 .tabs button {
     border: 2px solid var(--ink);
@@ -601,22 +490,10 @@ nav a {
     transition: background .2s, color .2s, transform .2s;
 }
 
-.tabs button:hover {
-    transform: translateY(-3px);
-}
+.tabs button:hover { transform: translateY(-3px); }
+.tabs button[aria-selected="true"] { background: var(--lime); color: var(--pd); }
 
-.tabs button[aria-selected="true"] {
-    background: var(--lime);
-    color: var(--pd);
-}
-
-.chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    min-height: 130px;
-    align-content: flex-start;
-}
+.chips { display: flex; flex-wrap: wrap; gap: 12px; min-height: 130px; align-content: flex-start; }
 
 .chip {
     border: 2px solid var(--ink);
@@ -628,34 +505,13 @@ nav a {
     transition: background-size .3s, color .3s, translate .25s;
 }
 
-@keyframes slide {
-    from {
-        opacity: 0;
-        transform: translateY(18px);
-    }
+@keyframes slide { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
+.proj, .certs { display: grid; gap: 30px; }
+.proj { grid-template-columns: 1fr 1fr; }
+.certs { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 
-.proj,
-.certs {
-    display: grid;
-    gap: 30px;
-}
-
-.proj {
-    grid-template-columns: 1fr 1fr;
-}
-
-.certs {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-}
-
-.pc,
-.cc {
+.pc, .cc {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -665,14 +521,9 @@ nav a {
     transition: transform .45s cubic-bezier(.2, .9, .2, 1), box-shadow .35s, background .3s, color .3s;
 }
 
-.pc>*,
-.cc>* {
-    position: relative;
-    z-index: 1;
-}
+.pc>*, .cc>* { position: relative; z-index: 1; }
 
-.pc::after,
-.cc::after {
+.pc::after, .cc::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -683,8 +534,7 @@ nav a {
     transition: opacity .4s;
 }
 
-.cover,
-.thumb {
+.cover, .thumb {
     position: relative;
     display: grid;
     place-items: center;
@@ -700,17 +550,10 @@ nav a {
     border-bottom: 3px solid var(--ink);
 }
 
-.cover {
-    height: 200px;
-}
+.cover { height: 200px; }
+.thumb { aspect-ratio: 4/3; font-size: 1.2rem; }
 
-.thumb {
-    aspect-ratio: 4/3;
-    font-size: 1.2rem;
-}
-
-.cover img,
-.thumb img {
+.cover img, .thumb img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -720,120 +563,30 @@ nav a {
     transition: transform .7s cubic-bezier(.2, .8, .2, 1), filter .5s;
 }
 
-.pb {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    flex: 1;
-}
+.pb { padding: 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.pb h3 { font-size: 1.5rem; font-weight: 900; letter-spacing: -.02em; }
+.cc .pb h3 { font-size: 1.2rem; }
+.pb p { color: var(--mute); }
 
-.pb h3 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: -.02em;
-}
+.more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+.more>div { overflow: hidden; }
+.more.open { grid-template-rows: 1fr; }
+.more dl { margin: 0; padding-top: 4px; display: grid; gap: 10px; }
+.more dt { font: 800 .8rem var(--fd); text-transform: uppercase; letter-spacing: .14em; }
+.more dd { margin: 0; color: var(--mute); }
+.pb>.btn { align-self: flex-start; margin-top: auto; }
 
-.cc .pb h3 {
-    font-size: 1.2rem;
-}
+.row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+.row .btn { padding: 10px 20px; }
+.empty { color: var(--mute); }
 
-.pb p {
-    color: var(--mute);
-}
+.ct { list-style: none; margin: 0; padding: 0; border-bottom: 3px solid var(--ink); }
+.ct li { display: flex; align-items: center; gap: 18px; padding: 24px 0; flex-wrap: wrap; }
+.ct b { font: 900 1.9rem var(--fd); font-stretch: 118%; text-transform: uppercase; letter-spacing: -.02em; min-width: 170px; }
+.ct span { color: var(--mute); flex: 1; min-width: 160px; word-break: break-all; transition: color .3s; }
+.ct .btn { padding: 9px 20px; }
 
-.more {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows .45s ease;
-}
-
-.more>div {
-    overflow: hidden;
-}
-
-.more.open {
-    grid-template-rows: 1fr;
-}
-
-.more dl {
-    margin: 0;
-    padding-top: 4px;
-    display: grid;
-    gap: 10px;
-}
-
-.more dt {
-    font: 800 .8rem var(--fd);
-    text-transform: uppercase;
-    letter-spacing: .14em;
-}
-
-.more dd {
-    margin: 0;
-    color: var(--mute);
-}
-
-.pb>.btn {
-    align-self: flex-start;
-    margin-top: auto;
-}
-
-.row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: auto;
-}
-
-.row .btn {
-    padding: 10px 20px;
-}
-
-.empty {
-    color: var(--mute);
-}
-
-.ct {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 3px solid var(--ink);
-}
-
-.ct li {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 24px 0;
-    flex-wrap: wrap;
-}
-
-.ct b {
-    font: 900 1.9rem var(--fd);
-    font-stretch: 118%;
-    text-transform: uppercase;
-    letter-spacing: -.02em;
-    min-width: 170px;
-}
-
-.ct span {
-    color: var(--mute);
-    flex: 1;
-    min-width: 160px;
-    word-break: break-all;
-    transition: color .3s;
-}
-
-.ct .btn {
-    padding: 9px 20px;
-}
-
-footer {
-    padding: 34px 0;
-    border-top: 3px solid var(--ink);
-    color: var(--mute);
-}
+footer { padding: 34px 0; border-top: 3px solid var(--ink); color: var(--mute); }
 
 #toast {
     position: fixed;
@@ -853,179 +606,46 @@ footer {
     border: 2px solid var(--pd);
 }
 
-#toast.show {
-    opacity: 1;
-    transform: translate(-50%, 0);
-}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
 
-.lb {
-    border: 3px solid var(--ink);
-    padding: 0;
-    max-width: min(92vw, 900px);
-    width: 100%;
-    background: var(--bg);
-    color: var(--ink);
-}
+.lb { border: 3px solid var(--ink); padding: 0; max-width: min(92vw, 900px); width: 100%; background: var(--bg); color: var(--ink); }
+.lb::backdrop { background: rgba(0, 0, 0, .85); }
+.lb[open] { animation: zoom .35s cubic-bezier(.2, .8, .2, 1); }
 
-.lb::backdrop {
-    background: rgba(0, 0, 0, .85);
-}
+.lbin { padding: 18px; display: grid; gap: 14px; justify-items: center; }
+.lbin img { max-width: 100%; height: auto; max-height: 70vh; }
 
-.lb[open] {
-    animation: zoom .35s cubic-bezier(.2, .8, .2, 1);
-}
-
-.lbin {
-    padding: 18px;
-    display: grid;
-    gap: 14px;
-    justify-items: center;
-}
-
-.lbin img {
-    max-width: 100%;
-    height: auto;
-    max-height: 70vh;
-}
-
-@keyframes zoom {
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-}
+@keyframes zoom { from { opacity: 0; transform: translateY(24px); } }
 
 @media (hover: hover) {
-    .logo:hover {
-        transform: skewX(-8deg) scale(1.05);
+    .logo:hover { transform: skewX(-8deg) scale(1.05); }
+    .btn:hover { background: var(--bg); color: var(--ink); border-color: var(--ink); box-shadow: 6px 6px 0 var(--sh); transform: translate(-3px, -3px); }
+    .btn.ghost:hover { background: var(--ink); color: var(--bg); box-shadow: 6px 6px 0 var(--sh); }
+    .btn:disabled:hover { transform: none; box-shadow: none; background: var(--btnbg); color: var(--btnink); border-color: var(--btnborder); }
+    .title:hover { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 4px var(--ink); translate: 10px 0; }
+    .hero h1 span:hover { background: transparent; color: transparent; box-shadow: none; -webkit-text-stroke: 3px var(--ink); }
+    .photo:hover .frame>img { filter: grayscale(0); }
+    .facts li:hover { translate: 8px 0; color: var(--ink); }
+    .facts>div { transition: padding-left .3s; }
+    .facts>div:hover { padding-left: 14px; }
+    .tl li:hover, .ct li:hover { --r: 1800px; color: var(--bg); padding-inline: 22px; }
+    .tl li:hover p, .ct li:hover span { color: var(--imute); }
+    .tl li:hover .yr, .ct li:hover b { color: var(--hl); }
+    .photo:hover .frame::after, .pc:hover .cover::after, .cc:hover .thumb::after { opacity: 0; }
+    .chip:hover { background-size: 100% 100%; color: var(--pd); translate: 0 -4px; }
+    .pc:hover, .cc:hover {
+        --bg: var(--ibg); --ink: var(--iink); --mute: var(--imute);
+        border-color: var(--ibg); background: var(--bg); color: var(--ink);
+        --tx: -5px; --ty: -5px; box-shadow: 9px 9px 0 var(--sh);
     }
-
-    .btn:hover {
-        background: var(--bg);
-        color: var(--ink);
-        border-color: var(--ink);
-        box-shadow: 6px 6px 0 var(--sh);
-        transform: translate(-3px, -3px);
-    }
-
-    .btn.ghost:hover {
-        background: var(--ink);
-        color: var(--bg);
-        box-shadow: 6px 6px 0 var(--sh);
-    }
-
-    .btn:disabled:hover {
-        transform: none;
-        box-shadow: none;
-        background: var(--btnbg);
-        color: var(--btnink);
-        border-color: var(--btnborder);
-    }
-
-    .title:hover {
-        background: transparent;
-        color: var(--ink);
-        box-shadow: inset 0 0 0 4px var(--ink);
-        translate: 10px 0;
-    }
-
-    .hero h1 span:hover {
-        background: transparent;
-        color: transparent;
-        box-shadow: none;
-        -webkit-text-stroke: 3px var(--ink);
-    }
-
-    .photo:hover .frame>img {
-        filter: grayscale(0);
-    }
-
-    .facts li:hover {
-        translate: 8px 0;
-        color: var(--ink);
-    }
-
-    .facts>div {
-        transition: padding-left .3s;
-    }
-
-    .facts>div:hover {
-        padding-left: 14px;
-    }
-
-    .tl li:hover,
-    .ct li:hover {
-        --r: 1800px;
-        color: var(--bg);
-        padding-inline: 22px;
-    }
-
-    .tl li:hover p,
-    .ct li:hover span {
-        color: var(--imute);
-    }
-
-    .tl li:hover .yr,
-    .ct li:hover b {
-        color: var(--hl);
-    }
-
-    .photo:hover .frame::after,
-    .pc:hover .cover::after,
-    .cc:hover .thumb::after {
-        opacity: 0;
-    }
-
-    .chip:hover {
-        background-size: 100% 100%;
-        color: var(--pd);
-        translate: 0 -4px;
-    }
-
-    .pc:hover,
-    .cc:hover {
-        --bg: var(--ibg);
-        --ink: var(--iink);
-        --mute: var(--imute);
-        border-color: var(--ibg);
-        background: var(--bg);
-        color: var(--ink);
-        --tx: -5px;
-        --ty: -5px;
-        box-shadow: 9px 9px 0 var(--sh);
-    }
-
-    .pc:hover::after,
-    .cc:hover::after {
-        opacity: 1;
-    }
-
-    .pc:hover .cover img,
-    .cc:hover .thumb img {
-        filter: grayscale(0);
-        transform: scale(1.08);
-    }
-
-    footer:hover {
-        color: var(--ink);
-    }
+    .pc:hover::after, .cc:hover::after { opacity: 1; }
+    .pc:hover .cover img, .cc:hover .thumb img { filter: grayscale(0); transform: scale(1.08); }
+    footer:hover { color: var(--ink); }
 }
 
-.stg>* {
-    opacity: 0;
-}
-
-.stg.in>* {
-    opacity: 1;
-    animation: rise .9s calc(var(--i, 0)*100ms) cubic-bezier(.2, .8, .2, 1) backwards;
-}
-
-@keyframes rise {
-    from {
-        opacity: 0;
-        transform: translateY(34px);
-    }
-}
+.stg>* { opacity: 0; }
+.stg.in>* { opacity: 1; animation: rise .9s calc(var(--i, 0)*100ms) cubic-bezier(.2, .8, .2, 1) backwards; }
+@keyframes rise { from { opacity: 0; transform: translateY(34px); } }
 
 footer .bigname {
     font: 900 clamp(3rem, 13vw, 10.5rem)/.9 var(--fd);
@@ -1039,29 +659,13 @@ footer .bigname {
     transition: color .5s, -webkit-text-stroke-color .5s;
 }
 
-footer .bigname:hover {
-    color: var(--tbg);
-    -webkit-text-stroke-color: var(--tbg);
-}
+footer .bigname:hover { color: var(--tbg); -webkit-text-stroke-color: var(--tbg); }
 
 @media (max-width: 900px) {
-    .pill {
-        display: none;
-    }
-
-    nav a.on {
-        background: var(--lime);
-        color: var(--pd);
-    }
-
-    section {
-        padding: 70px 0;
-    }
-
-    #menu {
-        display: block;
-    }
-
+    .pill { display: none; }
+    nav a.on { background: var(--lime); color: var(--pd); }
+    section { padding: 70px 0; }
+    #menu { display: block; }
     nav {
         position: absolute;
         left: 0;
@@ -1073,119 +677,38 @@ footer .bigname:hover {
         overflow: hidden;
         transition: max-height .4s ease;
     }
-
-    nav.open {
-        max-height: 480px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 10px 24px 18px;
-    }
-
-    .hero .wrap,
-    .about,
-    .proj {
-        grid-template-columns: 1fr;
-    }
-
-    .photo {
-        max-width: 270px;
-        order: -1;
-    }
-
-    .tl li {
-        grid-template-columns: 1fr;
-    }
-
-    .tl .yr {
-        grid-row: auto;
-    }
+    nav.open { max-height: 480px; }
+    nav ul { flex-direction: column; padding: 10px 24px 18px; }
+    .hero .wrap, .about, .proj { grid-template-columns: 1fr; }
+    .photo { max-width: 270px; order: -1; }
+    .tl li { grid-template-columns: 1fr; }
+    .tl .yr { grid-row: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         animation-duration: .01ms !important;
         animation-delay: 0s !important;
         transition-duration: .01ms !important;
         scroll-behavior: auto !important;
     }
-
-    .rv,
-    .chip,
-    .hello span,
-    .sum,
-    .cta,
-    .stg>* {
-        opacity: 1;
-        transform: none;
-    }
-
-    .hero h1 span {
-        clip-path: none;
-    }
-
-    .track {
-        animation: none;
-    }
+    .rv, .chip, .hello span, .sum, .cta, .stg>* { opacity: 1; transform: none; }
+    .hero h1 span { clip-path: none; }
+    .track { animation: none; }
 }
 
 /* ===== Tata tulis ===== */
-html {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    hyphens: auto;
-}
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; hyphens: auto; }
+body { font-weight: 400; font-size: 1.0625rem; line-height: 1.7; font-kerning: normal; }
+h1, h2, h3 { hyphens: manual; text-wrap: balance; }
+p, li, dd { text-wrap: pretty; }
+.lead { font-weight: 600; line-height: 1.35; letter-spacing: -.015em; }
+.tl .yr, .status { font-variant-numeric: tabular-nums; }
+.skillnote { color: var(--mute); margin: -6px 0 26px; max-width: 56ch; }
+header { border-bottom: 1px solid rgba(5, 44, 57, .20); }
 
-body {
-    font-weight: 400;
-    font-size: 1.0625rem;
-    line-height: 1.7;
-    font-kerning: normal;
-}
-
-h1,
-h2,
-h3 {
-    hyphens: manual;
-    text-wrap: balance;
-}
-
-p,
-li,
-dd {
-    text-wrap: pretty;
-}
-
-.lead {
-    font-weight: 600;
-    line-height: 1.35;
-    letter-spacing: -.015em;
-}
-
-.tl .yr,
-.status {
-    font-variant-numeric: tabular-nums;
-}
-
-.skillnote {
-    color: var(--mute);
-    margin: -6px 0 26px;
-    max-width: 56ch;
-}
-
-header {
-    border-bottom: 1px solid rgba(5, 44, 57, .20);
-}
-
-/* ===== Home v3: foto menimpa judul, kolom ringkasan di kanan ===== */
-.hero {
-    padding: 0;
-   background: radial-gradient(55% 70% at 64% 58%, rgba(201, 243, 29, .09), transparent 70%), var(--bg);
-}
-
+/* ===== Home v3 ===== */
+.hero { padding: 0; background: radial-gradient(55% 70% at 64% 58%, rgba(201, 243, 29, .09), transparent 70%), var(--bg); }
 .hero .wrap {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr) 270px;
@@ -1194,2082 +717,356 @@ header {
     align-items: stretch;
     min-height: min(86vh, 700px);
 }
+.copy { grid-area: 1/1/2/3; align-self: center; z-index: 2; padding: 72px 0; }
+.photo { grid-area: 1/2/2/3; align-self: end; justify-self: center; width: min(100%, 430px); height: min(66vh, 600px); aspect-ratio: auto; max-width: none; margin: 0; z-index: 1; }
+.side { grid-area: 1/3/2/4; align-self: center; z-index: 3; padding: 72px 0; }
 
-.copy {
-    grid-area: 1/1/2/3;
-    align-self: center;
-    z-index: 2;
-    padding: 72px 0;
-}
+.status { display: flex; align-items: center; gap: 10px; margin: 0 0 24px; padding: 0; border: 0; font: 700 .74rem var(--fd); letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
+.status[hidden] { display: none; }
+.status i { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--tbg); animation: ping 2.2s ease-out infinite; }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--tbg) 70%, transparent); } 100% { box-shadow: 0 0 0 12px transparent; } }
 
-.photo {
-    grid-area: 1/2/2/3;
-    align-self: end;
-    justify-self: center;
-    width: min(100%, 430px);
-    height: min(66vh, 600px);
-    aspect-ratio: auto;
-    max-width: none;
-    margin: 0;
-    z-index: 1;
-}
+.hline { display: block; width: 0; height: 5px; background: var(--tbg); margin-bottom: 26px; animation: grow .9s .1s cubic-bezier(.2, .8, .2, 1) forwards; }
+@keyframes grow { to { width: 76px; } }
 
-.side {
-    grid-area: 1/3/2/4;
-    align-self: center;
-    z-index: 3;
-    padding: 72px 0;
-}
+.hello { display: block; font: 600 1.15rem/1.2 var(--fb); letter-spacing: 0; text-transform: none; border: 0; padding: 0; margin-bottom: 12px; }
 
-.status {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 0 24px;
-    padding: 0;
-    border: 0;
-    font: 700 .74rem var(--fd);
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--mute);
-}
+.hero h1 { font-size: clamp(2.7rem, 6.4vw, 5.4rem); line-height: 1.05; letter-spacing: -.045em; margin-bottom: 22px; }
 
-.status[hidden] {
-    display: none;
-}
+.role { font: 800 clamp(1.05rem, 1.9vw, 1.5rem)/1.2 var(--fd); font-stretch: 112%; text-transform: uppercase; letter-spacing: -.01em; color: var(--tbg); margin: 0 0 20px; }
+.role[hidden] { display: none; }
 
-.status i {
-    flex: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--tbg);
-    animation: ping 2.2s ease-out infinite;
-}
+.sum { font-size: clamp(1.02rem, 1.3vw, 1.15rem); line-height: 1.6; font-weight: 400; max-width: 38ch; color: var(--mute); margin-bottom: 34px; }
 
-@keyframes ping {
-    0% {
-        box-shadow: 0 0 0 0 color-mix(in srgb, var(--tbg) 70%, transparent);
-    }
+.cta { align-items: center; gap: 18px; }
 
-    100% {
-        box-shadow: 0 0 0 12px transparent;
-    }
-}
+.down { position: relative; display: grid; place-items: center; width: 68px; height: 68px; border-radius: 50%; background: var(--lime); color: var(--pd); border: 3px solid var(--pd); text-decoration: none; transition: scale .35s cubic-bezier(.2, .9, .2, 1), translate .35s cubic-bezier(.2, .9, .2, 1); }
+.down svg { width: 26px; height: 26px; animation: nudge 2.4s ease-in-out infinite; }
+@keyframes nudge { 50% { translate: 0 5px; } }
 
-.hline {
-    display: block;
-    width: 0;
-    height: 5px;
-    background: var(--tbg);
-    margin-bottom: 26px;
-    animation: grow .9s .1s cubic-bezier(.2, .8, .2, 1) forwards;
-}
+.photo::before { content: ""; position: absolute; left: 50%; top: auto; bottom: 5%; width: 86%; aspect-ratio: 1; border-radius: 50%; background: var(--lime); border: 0; translate: calc(-50% + var(--hx, 0)*-16px) calc(var(--hy, 0)*-12px); transition: translate .5s cubic-bezier(.2, .9, .2, 1); }
+.frame { overflow: visible; background: transparent; display: grid; place-items: end center; }
+.frame::after { display: none; }
+.frame>img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; filter: none; }
+.ph { place-self: center; font-size: clamp(6rem, 14vw, 10rem); color: var(--pd); }
 
-@keyframes grow {
-    to {
-        width: 76px;
-    }
-}
-
-.hello {
-    display: block;
-    font: 600 1.15rem/1.2 var(--fb);
-    letter-spacing: 0;
-    text-transform: none;
-    border: 0;
-    padding: 0;
-    margin-bottom: 12px;
-}
-
-.hero h1 {
-    font-size: clamp(2.7rem, 6.4vw, 5.4rem);
-    line-height: 1.05;
-    letter-spacing: -.045em;
-    margin-bottom: 22px;
-}
-
-.role {
-    font: 800 clamp(1.05rem, 1.9vw, 1.5rem)/1.2 var(--fd);
-    font-stretch: 112%;
-    text-transform: uppercase;
-    letter-spacing: -.01em;
-    color: var(--tbg);
-    margin: 0 0 20px;
-}
-
-.role[hidden] {
-    display: none;
-}
-
-.sum {
-    font-size: clamp(1.02rem, 1.3vw, 1.15rem);
-    line-height: 1.6;
-    font-weight: 400;
-    max-width: 38ch;
-    color: var(--mute);
-    margin-bottom: 34px;
-}
-
-.cta {
-    align-items: center;
-    gap: 18px;
-}
-
-.down {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    background: var(--lime);
-    color: var(--pd);
-    border: 3px solid var(--pd);
-    text-decoration: none;
-    transition: scale .35s cubic-bezier(.2, .9, .2, 1), translate .35s cubic-bezier(.2, .9, .2, 1);
-}
-
-.down svg {
-    width: 26px;
-    height: 26px;
-    animation: nudge 2.4s ease-in-out infinite;
-}
-
-@keyframes nudge {
-    50% {
-        translate: 0 5px;
-    }
-}
-
-.photo::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: auto;
-    bottom: 5%;
-    width: 86%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: var(--lime);
-    border: 0;
-    translate: calc(-50% + var(--hx, 0)*-16px) calc(var(--hy, 0)*-12px);
-    transition: translate .5s cubic-bezier(.2, .9, .2, 1);
-}
-
-.frame {
-    overflow: visible;
-    background: transparent;
-    display: grid;
-    place-items: end center;
-}
-
-.frame::after {
-    display: none;
-}
-
-.frame>img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: bottom;
-    filter: none;
-}
-
-.ph {
-    place-self: center;
-    font-size: clamp(6rem, 14vw, 10rem);
-    color: var(--pd);
-}
-
-.sb {
-    padding: 26px 0;
-    border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
-}
-
-.sb:first-child {
-    border-top: 0;
-    padding-top: 0;
-}
-
-.sb[hidden] {
-    display: none;
-}
-
-.sl {
-    font: 800 .74rem var(--fd);
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.sb p {
-    font-size: .92rem;
-    line-height: 1.6;
-    color: var(--mute);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-bottom: 14px;
-}
-
-.lk {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 0 4px;
-    font: 800 .72rem var(--fd);
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: linear-gradient(var(--tbg), var(--tbg)) left bottom/100% 2px no-repeat;
-    transition: background-size .35s cubic-bezier(.2, .9, .2, 1), gap .3s, color .3s;
-}
-
-.soc-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.soc {
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-items: center;
-    border: 2px solid var(--ink);
-    transition: background .25s, color .25s, border-color .25s, translate .35s cubic-bezier(.2, .9, .2, 1);
-}
-
-.soc svg {
-    width: 18px;
-    height: 18px;
-}
-
-.soc.off {
-    opacity: .4;
-}
+.sb { padding: 26px 0; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+.sb:first-child { border-top: 0; padding-top: 0; }
+.sb[hidden] { display: none; }
+.sl { font: 800 .74rem var(--fd); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+.sb p { font-size: .92rem; line-height: 1.6; color: var(--mute); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; }
+.lk { display: inline-flex; align-items: center; gap: 8px; padding: 0 0 4px; font: 800 .72rem var(--fd); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; background: linear-gradient(var(--tbg), var(--tbg)) left bottom/100% 2px no-repeat; transition: background-size .35s cubic-bezier(.2, .9, .2, 1), gap .3s, color .3s; }
+.soc-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.soc { width: 40px; height: 40px; display: grid; place-items: center; border: 2px solid var(--ink); transition: background .25s, color .25s, border-color .25s, translate .35s cubic-bezier(.2, .9, .2, 1); }
+.soc svg { width: 18px; height: 18px; }
+.soc.off { opacity: .4; }
 
 @media (hover: hover) {
-    .down:hover {
-        scale: 1.1;
-        translate: 0 4px;
-    }
-
-    .lk:hover {
-        background-size: 100% 100%;
-        color: var(--tink);
-        gap: 14px;
-    }
-
-    .soc:not(.off):hover {
-        background: var(--tbg);
-        color: var(--tink);
-        border-color: var(--tbg);
-        translate: 0 -5px;
-    }
+    .down:hover { scale: 1.1; translate: 0 4px; }
+    .lk:hover { background-size: 100% 100%; color: var(--tink); gap: 14px; }
+    .soc:not(.off):hover { background: var(--tbg); color: var(--tink); border-color: var(--tbg); translate: 0 -5px; }
 }
 
-@media (max-width: 1060px) {
-    .hero .wrap {
-        grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) 230px;
-    }
-}
+@media (max-width: 1060px) { .hero .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr) 230px; } }
 
 @media (max-width: 900px) {
-    .hero .wrap {
-        grid-template-columns: 1fr;
-        min-height: 0;
-        gap: 0;
-    }
-
-    .copy {
-        grid-area: auto;
-        padding: 48px 0 12px;
-    }
-
-    .photo {
-        grid-area: auto;
-        height: 360px;
-        width: min(100%, 320px);
-        margin-top: 12px;
-    }
-
-    .side {
-        grid-area: auto;
-        padding: 34px 0 48px;
-    }
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; gap: 0; }
+    .copy { grid-area: auto; padding: 48px 0 12px; }
+    .photo { grid-area: auto; height: 360px; width: min(100%, 320px); margin-top: 12px; }
+    .side { grid-area: auto; padding: 34px 0 48px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .status i,
-    .down svg {
-        animation: none;
-    }
-
-    .hline {
-        width: 76px;
-        animation: none;
-    }
+    .status i, .down svg { animation: none; }
+    .hline { width: 76px; animation: none; }
 }
 
-/* ==== PATCH HOVER (style.css) ====
-   Tempel di PALING BAWAH style.css. Tidak ada kode lama yang dihapus.
-   ================================== */
-:root {
-    --ease: cubic-bezier(.22, 1, .36, 1);
-}
+/* ==== PATCH HOVER ==== */
+:root { --ease: cubic-bezier(.22, 1, .36, 1); }
+@property --bg { syntax: "<color>"; inherits: true; initial-value: #eef6f8; }
+@property --ink { syntax: "<color>"; inherits: true; initial-value: #052c39; }
+@property --mute { syntax: "<color>"; inherits: true; initial-value: #3f6070; }
 
-/* warna yang berganti saat kartu dibalik ikut dianimasikan, termasuk di dalam kartu */
-@property --bg {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: #eef6f8;
-}
+.pc, .cc { transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); translate: var(--tx, 0px) var(--ty, 0px); will-change: transform; transition: translate .55s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease), --bg .45s var(--ease), --ink .45s var(--ease), --mute .45s var(--ease); }
+.cover img, .thumb img { transition: transform .9s var(--ease), filter .6s var(--ease); will-change: transform; }
+.tl li, .ct li { transition: --r .8s var(--ease), color .35s var(--ease) .05s; }
+.tl li>*, .ct li>*, .facts>div>* { transition: translate .6s var(--ease), color .35s var(--ease); }
+.tl li:hover, .ct li:hover { padding-inline: 0; }
+.tl li:hover>*, .ct li:hover>:not(.btn) { translate: 22px 0; }
+.facts>div { transition: none; }
+.facts>div:hover { padding-left: 0; }
+.facts>div:hover>* { translate: 14px 0; }
+.btn { transition: transform .4s var(--ease), box-shadow .4s var(--ease), background-color .3s, color .3s, border-color .3s; }
+.modebtn, #menu, .logo { transition: background-color .3s, color .3s, transform .4s var(--ease); }
+.chip { transition: background-size .45s var(--ease), color .3s, translate .45s var(--ease); }
+.lk { transition: background-size .45s var(--ease), gap .4s var(--ease), color .3s; }
+.soc { transition: background-color .3s, color .3s, border-color .3s, translate .45s var(--ease); }
+.down { transition: scale .45s var(--ease), translate .45s var(--ease); }
+.title { transition: background-color .35s, color .35s, box-shadow .35s, translate .5s var(--ease); }
+.hero h1 span { -webkit-text-stroke: 3px transparent; transition: background-color .3s, color .3s, box-shadow .3s, -webkit-text-stroke-color .3s; }
+.frame { transition: transform .35s var(--ease); }
+.photo::before { transition: none; }
 
-@property --ink {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: #052c39;
-}
-
-@property --mute {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: #3f6070;
-}
-
-/* kartu: miring dikendalikan JS (tanpa transisi), angkat dan warna pakai transisi */
-.pc,
-.cc {
-    transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-    translate: var(--tx, 0px) var(--ty, 0px);
-    will-change: transform;
-    transition: translate .55s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease), --bg .45s var(--ease), --ink .45s var(--ease), --mute .45s var(--ease);
-}
-
-.cover img,
-.thumb img {
-    transition: transform .9s var(--ease), filter .6s var(--ease);
-    will-change: transform;
-}
-
-/* baris: teks bergeser dengan translate, bukan padding, jadi tidak menggeser tata letak */
-.tl li,
-.ct li {
-    transition: --r .8s var(--ease), color .35s var(--ease) .05s;
-}
-
-.tl li>*,
-.ct li>*,
-.facts>div>* {
-    transition: translate .6s var(--ease), color .35s var(--ease);
-}
-
-.tl li:hover,
-.ct li:hover {
-    padding-inline: 0;
-}
-
-.tl li:hover>*,
-.ct li:hover>:not(.btn) {
-    translate: 22px 0;
-}
-
-.facts>div {
-    transition: none;
-}
-
-.facts>div:hover {
-    padding-left: 0;
-}
-
-.facts>div:hover>* {
-    translate: 14px 0;
-}
-
-/* tombol, chip, tautan, ikon */
-.btn {
-    transition: transform .4s var(--ease), box-shadow .4s var(--ease), background-color .3s, color .3s, border-color .3s;
-}
-
-.modebtn,
-#menu,
-.logo {
-    transition: background-color .3s, color .3s, transform .4s var(--ease);
-}
-
-.chip {
-    transition: background-size .45s var(--ease), color .3s, translate .45s var(--ease);
-}
-
-.lk {
-    transition: background-size .45s var(--ease), gap .4s var(--ease), color .3s;
-}
-
-.soc {
-    transition: background-color .3s, color .3s, border-color .3s, translate .45s var(--ease);
-}
-
-.down {
-    transition: scale .45s var(--ease), translate .45s var(--ease);
-}
-
-.title {
-    transition: background-color .35s, color .35s, box-shadow .35s, translate .5s var(--ease);
-}
-
-.hero h1 span {
-    -webkit-text-stroke: 3px transparent;
-    transition: background-color .3s, color .3s, box-shadow .3s, -webkit-text-stroke-color .3s;
-}
-
-.frame {
-    transition: transform .35s var(--ease);
-}
-
-.photo::before {
-    transition: none;
-}
-
-/* ===== Kursor v2: titik presisi + cincin pengejar, berubah mengikuti konteks ===== */
-#cur,
-#cur-dot {
-    display: none;
-}
-
+/* ===== Kursor v2 ===== */
+#cur, #cur-dot { display: none; }
 @media (hover: hover) and (pointer: fine) {
-    html.has-cur,
-    html.has-cur * {
-        cursor: none !important;
-    }
-
-    html.has-cur:has(dialog[open]),
-    html.has-cur:has(dialog[open]) * {
-        cursor: auto !important;
-    }
-
-    html.has-cur:has(dialog[open]) #cur,
-    html.has-cur:has(dialog[open]) #cur-dot {
-        opacity: 0 !important;
-    }
-
-    #cur,
-    #cur-dot {
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 0;
-        pointer-events: none;
-        z-index: 90;
-        opacity: 0;
-        --cc: var(--pd);
-        --oc: var(--ice);
-        will-change: transform;
-    }
-
-    #cur.dk,
-    #cur-dot.dk {
-        --cc: var(--lime);
-        --oc: var(--pd);
-    }
-
-    #cur.on,
-    #cur-dot.on {
-        opacity: 1;
-    }
-
-    #cur {
-        width: 38px;
-        height: 38px;
-        margin: -19px 0 0 -19px;
-        border: 2px solid var(--cc);
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        transition: opacity .3s, width .45s var(--ease), height .45s var(--ease), margin .45s var(--ease), background-color .3s, border-color .3s;
-    }
-
-    #cur>span {
-        font: 800 .72rem var(--fd);
-        letter-spacing: .12em;
-        text-transform: uppercase;
-        color: var(--pd);
-        opacity: 0;
-        transition: opacity .2s;
-    }
-
-    #cur.lg {
-        width: 68px;
-        height: 68px;
-        margin: -34px 0 0 -34px;
-        background: color-mix(in srgb, var(--cc) 20%, transparent);
-    }
-
-    #cur.lab {
-        width: 96px;
-        height: 96px;
-        margin: -48px 0 0 -48px;
-        background: var(--lime);
-        border-color: var(--pd);
-    }
-
-    #cur.lab>span {
-        opacity: 1;
-        transition-delay: .12s;
-    }
-
-    #cur.press:not(.lab) {
-        width: 28px;
-        height: 28px;
-        margin: -14px 0 0 -14px;
-        background: color-mix(in srgb, var(--cc) 45%, transparent);
-    }
-
-    #cur.txt.on {
-        opacity: 0;
-    }
-
-    #cur-dot {
-        width: 10px;
-        height: 10px;
-        margin: -5px 0 0 -5px;
-        border-radius: 50%;
-        background: var(--cc);
-        box-shadow: 0 0 0 2px var(--oc);
-        transition: opacity .25s, width .3s var(--ease), height .3s var(--ease), margin .3s var(--ease), border-radius .3s, background-color .3s, box-shadow .3s, scale .25s;
-    }
-
-    #cur-dot.txt {
-        width: 3px;
-        height: 28px;
-        margin: -14px 0 0 -1.5px;
-        border-radius: 2px;
-    }
-
-    #cur-dot.lab.on {
-        opacity: 0;
-    }
-
-    #cur-dot.press {
-        scale: .6;
-    }
+    html.has-cur, html.has-cur * { cursor: none !important; }
+    html.has-cur:has(dialog[open]), html.has-cur:has(dialog[open]) * { cursor: auto !important; }
+    html.has-cur:has(dialog[open]) #cur, html.has-cur:has(dialog[open]) #cur-dot { opacity: 0 !important; }
+    #cur, #cur-dot { display: block; position: fixed; left: 0; top: 0; pointer-events: none; z-index: 90; opacity: 0; --cc: var(--pd); --oc: var(--ice); will-change: transform; }
+    #cur.dk, #cur-dot.dk { --cc: var(--lime); --oc: var(--pd); }
+    #cur.on, #cur-dot.on { opacity: 1; }
+    #cur { width: 38px; height: 38px; margin: -19px 0 0 -19px; border: 2px solid var(--cc); border-radius: 50%; display: grid; place-items: center; transition: opacity .3s, width .45s var(--ease), height .45s var(--ease), margin .45s var(--ease), background-color .3s, border-color .3s; }
+    #cur>span { font: 800 .72rem var(--fd); letter-spacing: .12em; text-transform: uppercase; color: var(--pd); opacity: 0; transition: opacity .2s; }
+    #cur.lg { width: 68px; height: 68px; margin: -34px 0 0 -34px; background: color-mix(in srgb, var(--cc) 20%, transparent); }
+    #cur.lab { width: 96px; height: 96px; margin: -48px 0 0 -48px; background: var(--lime); border-color: var(--pd); }
+    #cur.lab>span { opacity: 1; transition-delay: .12s; }
+    #cur.press:not(.lab) { width: 28px; height: 28px; margin: -14px 0 0 -14px; background: color-mix(in srgb, var(--cc) 45%, transparent); }
+    #cur.txt.on { opacity: 0; }
+    #cur-dot { width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--cc); box-shadow: 0 0 0 2px var(--oc); transition: opacity .25s, width .3s var(--ease), height .3s var(--ease), margin .3s var(--ease), border-radius .3s, background-color .3s, box-shadow .3s, scale .25s; }
+    #cur-dot.txt { width: 3px; height: 28px; margin: -14px 0 0 -1.5px; border-radius: 2px; }
+    #cur-dot.lab.on { opacity: 0; }
+    #cur-dot.press { scale: .6; }
 }
 
-/* ===== Menu: pil lime mengikuti kursor dengan teks gelap di dalamnya ===== */
-header {
-    color: var(--ink);
-}
-
-.pill {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    height: auto;
-    margin: 0;
-    overflow: hidden;
-    background: var(--lime);
-    opacity: 0;
-    pointer-events: none;
-    z-index: 0;
-    transition: transform .32s cubic-bezier(.22, 1, .36, 1), width .32s cubic-bezier(.22, 1, .36, 1), opacity .25s;
-}
-
-.pill-in {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    gap: 2px;
-    transition: transform .32s cubic-bezier(.22, 1, .36, 1);
-}
-
-.pill-in span {
-    display: block;
-    padding: 10px 11px;
-    font: 800 .78rem var(--fd);
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    white-space: nowrap;
-    color: var(--pd);
-}
+/* ===== Menu ===== */
+header { color: var(--ink); }
+.pill { position: absolute; left: 0; top: 0; bottom: 0; height: auto; margin: 0; overflow: hidden; background: var(--lime); opacity: 0; pointer-events: none; z-index: 0; transition: transform .32s cubic-bezier(.22, 1, .36, 1), width .32s cubic-bezier(.22, 1, .36, 1), opacity .25s; }
+.pill-in { position: absolute; left: 0; top: 0; bottom: 0; display: flex; gap: 2px; transition: transform .32s cubic-bezier(.22, 1, .36, 1); }
+.pill-in span { display: block; padding: 10px 11px; font: 800 .78rem var(--fd); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; color: var(--pd); }
 
 /* ANIMASI FOTO PROFIL */
-.profile-float {
-    animation: floating 3.5s ease-in-out infinite;
-    transition: transform 0.4s ease;
-    transform-origin: center bottom;
-}
+.profile-float { animation: floating 3.5s ease-in-out infinite; transition: transform 0.4s ease; transform-origin: center bottom; }
+@keyframes floating { 0% { transform: translateY(0); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0); } }
+.profile-float:hover { transform: translateY(-8px) scale(1.04); }
+@media (prefers-reduced-motion: reduce) { .profile-float { animation: none; } }
 
-/* Gerakan naik turun */
-@keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Efek ketika kursor diarahkan */
-.profile-float:hover {
-    transform: translateY(-8px) scale(1.04);
-}
-
-/* Menghormati pengaturan pengguna yang mengurangi animasi */
-@media (prefers-reduced-motion: reduce) {
-    .profile-float {
-        animation: none;
-    }
-}
-
-/* =====================================================
-   INTERACTIVE MAGNETIC LETTERS
-   Setiap huruf bergerak mengikuti kursor
-   ===================================================== */
-
-.hero h1 {
-    perspective: 800px;
-}
-
-.hero h1 > span {
-    background: transparent !important;
-    color: inherit !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 .12em 0 0 !important;
-    clip-path: none !important;
-    animation: none !important;
-    transform: none;
-}
-
-/* Huruf individual */
-.hero h1 .magnetic-letter {
-    display: inline-block;
-    position: relative;
-
-    background: transparent !important;
-    color: inherit !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-
-    transform:
-        translate3d(
-            var(--move-x, 0px),
-            var(--move-y, 0px),
-            0
-        );
-
-    transition:
-        transform .35s cubic-bezier(.22, 1, .36, 1),
-        color .3s ease;
-
-    will-change: transform;
-    cursor: default;
-}
-
-/* Warna nama */
-.hero h1 > span:first-child {
-    color: var(--ice) !important;
-}
-
-.hero h1 > span:nth-child(2) {
-    color: var(--lime) !important;
-}
-
-/* Ketika kursor menyentuh huruf */
+/* MAGNETIC LETTERS */
+.hero h1 { perspective: 800px; }
+.hero h1 > span { background: transparent !important; color: inherit !important; box-shadow: none !important; padding: 0 !important; margin: 0 .12em 0 0 !important; clip-path: none !important; animation: none !important; transform: none; }
+.hero h1 .magnetic-letter { display: inline-block; position: relative; background: transparent !important; color: inherit !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; transform: translate3d(var(--move-x, 0px), var(--move-y, 0px), 0); transition: transform .35s cubic-bezier(.22, 1, .36, 1), color .3s ease; will-change: transform; cursor: default; }
+.hero h1 > span:first-child { color: var(--ice) !important; }
+.hero h1 > span:nth-child(2) { color: var(--lime) !important; }
 @media (hover: hover) and (pointer: fine) {
-    .hero h1 .magnetic-letter:hover {
-        transform:
-            translate3d(
-                var(--move-x, 0px),
-                calc(var(--move-y, 0px) - 12px),
-                0
-            )
-            rotate(-7deg)
-            scale(1.16);
-
-        color: var(--lime) !important;
-        z-index: 5;
-    }
-
-    .hero h1 > span:nth-child(2) .magnetic-letter:hover {
-        color: var(--ice) !important;
-    }
-}
-
-/* Animasi kembali setelah kursor menjauh */
-.hero h1 .magnetic-letter {
-    transition:
-        transform .45s cubic-bezier(.22, 1, .36, 1),
-        color .3s ease;
-}
-
-/* Aksesibilitas */
-@media (prefers-reduced-motion: reduce) {
-    .hero h1 .magnetic-letter {
-        transition: none !important;
-    }
-}
-
-/* =========================================
-   FIX WARNA NAMA PADA DARK / LIGHT MODE
-   ========================================= */
-
-/* Muhammad mengikuti warna teks tema */
-.hero h1 > span:first-child,
-.hero h1 > span:first-child .magnetic-letter {
-    color: var(--ink) !important;
-}
-
-/* Surya tetap menggunakan warna lime */
-.hero h1 > span:nth-child(2),
-.hero h1 > span:nth-child(2) .magnetic-letter {
-    color: var(--lime) !important;
-}
-
-/* Hover tetap interaktif */
-@media (hover: hover) and (pointer: fine) {
-    .hero h1 .magnetic-letter:hover {
-        color: var(--lime) !important;
-    }
-}
-
-/* ============================================================
-   ACHIEVEMENTS SECTION
-   Desain kartu prestasi sepak bola
-============================================================ */
-
-.achievement-intro {
-    max-width: 650px;
-    margin: -10px 0 35px;
-    color: var(--mute);
-}
-
-.achievements {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    align-items: stretch;
-}
-
-.achievement-card {
-    overflow: hidden;
-}
-
-.achievement-visual {
-    min-height: 210px;
-    aspect-ratio: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(201, 243, 29, .15),
-            transparent 65%
-        ),
-        var(--p);
-}
-
-.achievement-symbol {
-    font-size: 4.5rem;
-    line-height: 1;
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .2));
-    transition: transform .4s ease;
-}
-
-.achievement-rank {
-    display: inline-block;
-    padding: 7px 17px;
-    background: var(--lime);
-    color: var(--pd);
-    font: 900 1rem var(--fd);
-    letter-spacing: .1em;
-}
-
-.achievement-year {
-    display: inline-block;
-    color: var(--p);
-    font: 900 .9rem var(--fd);
-    letter-spacing: .15em;
-}
-
-.achievement-club {
-    font-weight: 800;
-    color: var(--p) !important;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-}
-
-.achievement-card:hover .achievement-symbol {
-    transform: translateY(-8px) rotate(-8deg) scale(1.12);
-}
-
-:root[data-mode="dark"] .achievement-year,
-:root[data-mode="dark"] .achievement-club {
-    color: var(--lime) !important;
-}
-
-@media (max-width: 600px) {
-
-    .achievements {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .achievement-visual {
-        min-height: 180px;
-    }
-
-    .achievement-symbol {
-        font-size: 3.8rem;
-    }
-
-}
-.achievement-visual {
-    position: relative;
-    height: 230px;
-    overflow: hidden;
-    padding: 0;
-}
-
-.achievement-visual img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(0);
-    transition: transform .6s ease;
-}
-
-.achievement-card:hover .achievement-visual img {
-    transform: scale(1.08);
-}
-
-.achievement-rank {
-    position: absolute;
-    z-index: 2;
-    bottom: 15px;
-    left: 15px;
-}
-
-
-/* ============================================================
-   TOMBOL DOWNLOAD CV PDF
-   ============================================================ */
-
-.pdf-download {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 18px;
-    border: 1px solid var(--lime);
-    border-radius: 8px;
-    background: var(--lime);
-    color: var(--pd);
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.pdf-download:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.pdf-download:active {
-    transform: translateY(-1px);
-}
-
-/* ============================================================
-   DOKUMEN CV FORMAL UNTUK PDF
-   ============================================================ */
-
-#pdfDocument {
-    display: none;
-}
-
-/* =========================================
-   NAVBAR DOWNLOAD PDF
-========================================= */
-
-.pdf-download {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-shrink: 0;
-
-    padding: 10px 16px;
-    border: 2px solid var(--lime);
-
-    background: var(--lime);
-    color: var(--pd);
-
-    font: 800 .75rem var(--fd);
-    letter-spacing: .06em;
-    text-transform: uppercase;
-
-    cursor: pointer;
-
-    transition:
-        background .3s,
-        color .3s,
-        transform .35s,
-        box-shadow .35s;
-}
-
-.pdf-download span {
-    font-size: 1.1rem;
-}
-
-.pdf-download:hover {
-    background: var(--bg);
-    color: var(--ink);
-    transform: translateY(-3px);
-    box-shadow: 4px 4px 0 var(--lime);
-}
-
-.pdf-download:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-/* RESPONSIVE NAVBAR */
-@media (max-width: 900px) {
-    .bar {
-        gap: 8px;
-    }
-
-    .pdf-download {
-        padding: 9px 10px;
-        font-size: .65rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .pdf-download {
-        padding: 8px;
-        font-size: .58rem;
-        gap: 4px;
-    }
-}
-
-
-/* ============================================================
-   PROFESSIONAL CV PDF - A4 ONE PAGE
-   Desain dua kolom dengan sidebar navy
-   Khusus dokumen PDF, tidak mengubah tampilan website
-   ============================================================ */
-
-#pdfDocument {
-    display: none;
-    width: 210mm;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: #263746;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* ============================================================
-   HALAMAN A4
-   ============================================================ */
-
-#pdfDocument .pdf-page {
-    width: 210mm;
-    height: 297mm;
-    min-height: 297mm;
-    max-height: 297mm;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-/* ============================================================
-   KONTEN UTAMA
-   ============================================================ */
-
-#pdfDocument .pdf-content {
-    display: grid;
-    grid-template-columns: 34% 66%;
-    align-items: stretch;
-    width: 100%;
-    min-height: 297mm;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 8pt;
-    line-height: 1.35;
-    background: #ffffff;
-}
-
-/* ============================================================
-   SIDEBAR KIRI
-   ============================================================ */
-
-#pdfDocument .pdf-sidebar {
-    min-width: 0;
-    padding: 9mm 6mm;
-    box-sizing: border-box;
-    background: #0b3545;
-    color: #ffffff;
-}
-
-#pdfDocument .pdf-profile {
-    margin-bottom: 17px;
-    text-align: center;
-}
-
-#pdfDocument .pdf-photo {
-    width: 31mm;
-    height: 38mm;
-    margin: 0 auto 12px;
-    overflow: hidden;
-    border: 2px solid #c9f31d;
-    border-radius: 3px;
-    background: #ffffff;
-}
-
-#pdfDocument .pdf-photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-#pdfDocument .pdf-name {
-    margin: 0 0 6px;
-    color: #ffffff;
-    font-size: 17pt;
-    line-height: 1.15;
-    font-weight: 800;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-role {
-    margin: 0 0 7px;
-    color: #c9f31d;
-    font-size: 9pt;
-    line-height: 1.35;
-    font-weight: 700;
-}
-
-#pdfDocument .pdf-headline {
-    margin: 0 0 9px;
-    color: #dce9ed;
-    font-size: 7.5pt;
-    line-height: 1.4;
-}
-
-#pdfDocument .pdf-identity {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    color: #dce9ed;
-    font-size: 7.5pt;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-}
-
-/* ============================================================
-   JUDUL BAGIAN SIDEBAR
-   ============================================================ */
-
-#pdfDocument .pdf-side-section {
-    margin: 0 0 13px;
-    page-break-inside: auto;
-    break-inside: auto;
-}
-
-#pdfDocument .pdf-side-section h2 {
-    margin: 0 0 7px;
-    padding-bottom: 5px;
-    border-bottom: 1.5px solid #c9f31d;
-    color: #c9f31d;
-    font-size: 8.5pt;
-    font-weight: 800;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-}
-
-#pdfDocument .pdf-side-section p {
-    margin: 3px 0;
-    color: #e1ebee;
-    font-size: 7.5pt;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-}
-
-/* ============================================================
-   KONTAK SIDEBAR
-   ============================================================ */
-
-#pdfDocument .pdf-contact-item {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin: 0 0 7px;
-    color: #ffffff;
-    font-size: 7.3pt;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-contact-item strong {
-    color: #c9f31d;
-    font-size: 7.2pt;
-    font-weight: 700;
-}
-
-/* ============================================================
-   DAFTAR KEAHLIAN SIDEBAR
-   ============================================================ */
-
-#pdfDocument .pdf-list {
-    margin: 4px 0 5px;
-    padding-left: 14px;
-}
-
-#pdfDocument .pdf-list li {
-    margin: 0 0 4px;
-    padding-left: 1px;
-    color: #e1ebee;
-    font-size: 7.5pt;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-skill-group {
-    margin-bottom: 8px;
-}
-
-#pdfDocument .pdf-skill-group > strong {
-    color: #ffffff;
-    font-size: 7.7pt;
-}
-
-/* ============================================================
-   BAGIAN KANAN
-   ============================================================ */
-
-#pdfDocument .pdf-main {
-    min-width: 0;
-    padding: 9mm 8mm;
-    box-sizing: border-box;
-    background: #ffffff;
-    color: #263746;
-}
-
-/* ============================================================
-   SECTION UTAMA
-   ============================================================ */
-
-#pdfDocument .pdf-section {
-    margin: 0 0 11px;
-    page-break-inside: auto;
-    break-inside: auto;
-}
-
-#pdfDocument .pdf-section h2 {
-    margin: 0 0 6px;
-    padding-bottom: 4px;
-    border-bottom: 1.5px solid #c9d2d8;
-    color: #0b4a5e;
-    font-size: 9.5pt;
-    font-weight: 800;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-}
-
-#pdfDocument .pdf-section > p {
-    margin: 3px 0;
-    color: #354650;
-    font-size: 8pt;
-    line-height: 1.4;
-    text-align: justify;
-    overflow-wrap: anywhere;
-}
-
-/* ============================================================
-   ITEM PENDIDIKAN, PENGALAMAN, PROYEK, PRESTASI
-   ============================================================ */
-
-#pdfDocument .pdf-item {
-    margin: 0 0 7px;
-    page-break-inside: avoid;
-    break-inside: avoid;
-}
-
-#pdfDocument .pdf-item-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 7px;
-}
-
-#pdfDocument .pdf-item-heading strong,
-#pdfDocument .pdf-item > strong {
-    color: #173746;
-    font-size: 8.2pt;
-    font-weight: 700;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-item-heading span {
-    flex-shrink: 0;
-    color: #647782;
-    font-size: 7.3pt;
-    font-weight: 700;
-}
-
-#pdfDocument .pdf-item p {
-    margin: 2px 0;
-    color: #52636c;
-    font-size: 7.7pt;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-item p strong {
-    color: #263746;
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-
-#pdfDocument .pdf-footer {
-    margin-top: 9px;
-    padding-top: 5px;
-    border-top: 1px solid #d5dde1;
-    color: #87949b;
-    font-size: 7pt;
-    text-align: right;
-}
-
-/* ============================================================
-   GAMBAR
-   ============================================================ */
-
-#pdfDocument img {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-}
-
-/* ============================================================
-   PENGATURAN CETAK A4
-   ============================================================ */
-
-@page {
-    size: A4 portrait;
-    margin: 0;
-}
-
+    .hero h1 .magnetic-letter:hover { transform: translate3d(var(--move-x, 0px), calc(var(--move-y, 0px) - 12px), 0) rotate(-7deg) scale(1.16); color: var(--lime) !important; z-index: 5; }
+    .hero h1 > span:nth-child(2) .magnetic-letter:hover { color: var(--ice) !important; }
+}
+.hero h1 .magnetic-letter { transition: transform .45s cubic-bezier(.22, 1, .36, 1), color .3s ease; }
+@media (prefers-reduced-motion: reduce) { .hero h1 .magnetic-letter { transition: none !important; } }
+
+/* FIX WARNA NAMA */
+.hero h1 > span:first-child, .hero h1 > span:first-child .magnetic-letter { color: var(--ink) !important; }
+.hero h1 > span:nth-child(2), .hero h1 > span:nth-child(2) .magnetic-letter { color: var(--lime) !important; }
+@media (hover: hover) and (pointer: fine) { .hero h1 .magnetic-letter:hover { color: var(--lime) !important; } }
+
+/* ACHIEVEMENTS */
+.achievement-intro { max-width: 650px; margin: -10px 0 35px; color: var(--mute); }
+.achievements { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: stretch; }
+.achievement-card { overflow: hidden; }
+.achievement-visual { min-height: 210px; aspect-ratio: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; background: radial-gradient(circle at center, rgba(201, 243, 29, .15), transparent 65%), var(--p); }
+.achievement-symbol { font-size: 4.5rem; line-height: 1; filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .2)); transition: transform .4s ease; }
+.achievement-rank { display: inline-block; padding: 7px 17px; background: var(--lime); color: var(--pd); font: 900 1rem var(--fd); letter-spacing: .1em; }
+.achievement-year { display: inline-block; color: var(--p); font: 900 .9rem var(--fd); letter-spacing: .15em; }
+.achievement-club { font-weight: 800; color: var(--p) !important; text-transform: uppercase; letter-spacing: .04em; }
+.achievement-card:hover .achievement-symbol { transform: translateY(-8px) rotate(-8deg) scale(1.12); }
+:root[data-mode="dark"] .achievement-year, :root[data-mode="dark"] .achievement-club { color: var(--lime) !important; }
+@media (max-width: 600px) { .achievements { grid-template-columns: 1fr; gap: 22px; } .achievement-visual { min-height: 180px; } .achievement-symbol { font-size: 3.8rem; } }
+.achievement-visual { position: relative; height: 230px; overflow: hidden; padding: 0; }
+.achievement-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0); transition: transform .6s ease; }
+.achievement-card:hover .achievement-visual img { transform: scale(1.08); }
+.achievement-rank { position: absolute; z-index: 2; bottom: 15px; left: 15px; }
+
+/* PDF DOWNLOAD */
+.pdf-download { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border: 1px solid var(--lime); border-radius: 8px; background: var(--lime); color: var(--pd); font-family: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s ease; }
+.pdf-download:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); }
+.pdf-download:active { transform: translateY(-1px); }
+#pdfDocument { display: none; }
+.pdf-download { display: inline-flex; align-items: center; justify-content: center; gap: 8px; flex-shrink: 0; padding: 10px 16px; border: 2px solid var(--lime); background: var(--lime); color: var(--pd); font: 800 .75rem var(--fd); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; transition: background .3s, color .3s, transform .35s, box-shadow .35s; }
+.pdf-download span { font-size: 1.1rem; }
+.pdf-download:hover { background: var(--bg); color: var(--ink); transform: translateY(-3px); box-shadow: 4px 4px 0 var(--lime); }
+.pdf-download:active { transform: translateY(0); box-shadow: none; }
+@media (max-width: 900px) { .bar { gap: 8px; } .pdf-download { padding: 9px 10px; font-size: .65rem; } }
+@media (max-width: 480px) { .pdf-download { padding: 8px; font-size: .58rem; gap: 4px; } }
+
+/* PDF DOKUMEN */
+#pdfDocument { display: none; width: 210mm; margin: 0; padding: 0; background: #ffffff; color: #263746; font-family: Arial, Helvetica, sans-serif; }
+#pdfDocument .pdf-page { width: 210mm; height: 297mm; min-height: 297mm; max-height: 297mm; margin: 0; padding: 0; box-sizing: border-box; overflow: hidden; background: #ffffff; }
+#pdfDocument .pdf-content { display: grid; grid-template-columns: 34% 66%; align-items: stretch; width: 100%; min-height: 297mm; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; line-height: 1.35; background: #ffffff; }
+#pdfDocument .pdf-sidebar { min-width: 0; padding: 9mm 6mm; box-sizing: border-box; background: #0b3545; color: #ffffff; }
+#pdfDocument .pdf-profile { margin-bottom: 17px; text-align: center; }
+#pdfDocument .pdf-photo { width: 31mm; height: 38mm; margin: 0 auto 12px; overflow: hidden; border: 2px solid #c9f31d; border-radius: 3px; background: #ffffff; }
+#pdfDocument .pdf-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+#pdfDocument .pdf-name { margin: 0 0 6px; color: #ffffff; font-size: 17pt; line-height: 1.15; font-weight: 800; overflow-wrap: anywhere; }
+#pdfDocument .pdf-role { margin: 0 0 7px; color: #c9f31d; font-size: 9pt; line-height: 1.35; font-weight: 700; }
+#pdfDocument .pdf-headline { margin: 0 0 9px; color: #dce9ed; font-size: 7.5pt; line-height: 1.4; }
+#pdfDocument .pdf-identity { display: flex; flex-direction: column; gap: 4px; color: #dce9ed; font-size: 7.5pt; line-height: 1.4; overflow-wrap: anywhere; }
+#pdfDocument .pdf-side-section { margin: 0 0 13px; page-break-inside: auto; break-inside: auto; }
+#pdfDocument .pdf-side-section h2 { margin: 0 0 7px; padding-bottom: 5px; border-bottom: 1.5px solid #c9f31d; color: #c9f31d; font-size: 8.5pt; font-weight: 800; letter-spacing: 0.7px; text-transform: uppercase; }
+#pdfDocument .pdf-side-section p { margin: 3px 0; color: #e1ebee; font-size: 7.5pt; line-height: 1.4; overflow-wrap: anywhere; }
+#pdfDocument .pdf-contact-item { display: flex; flex-direction: column; gap: 2px; margin: 0 0 7px; color: #ffffff; font-size: 7.3pt; line-height: 1.35; overflow-wrap: anywhere; }
+#pdfDocument .pdf-contact-item strong { color: #c9f31d; font-size: 7.2pt; font-weight: 700; }
+#pdfDocument .pdf-list { margin: 4px 0 5px; padding-left: 14px; }
+#pdfDocument .pdf-list li { margin: 0 0 4px; padding-left: 1px; color: #e1ebee; font-size: 7.5pt; line-height: 1.35; overflow-wrap: anywhere; }
+#pdfDocument .pdf-skill-group { margin-bottom: 8px; }
+#pdfDocument .pdf-skill-group > strong { color: #ffffff; font-size: 7.7pt; }
+#pdfDocument .pdf-main { min-width: 0; padding: 9mm 8mm; box-sizing: border-box; background: #ffffff; color: #263746; }
+#pdfDocument .pdf-section { margin: 0 0 11px; page-break-inside: auto; break-inside: auto; }
+#pdfDocument .pdf-section h2 { margin: 0 0 6px; padding-bottom: 4px; border-bottom: 1.5px solid #c9d2d8; color: #0b4a5e; font-size: 9.5pt; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; }
+#pdfDocument .pdf-section > p { margin: 3px 0; color: #354650; font-size: 8pt; line-height: 1.4; text-align: justify; overflow-wrap: anywhere; }
+#pdfDocument .pdf-item { margin: 0 0 7px; page-break-inside: avoid; break-inside: avoid; }
+#pdfDocument .pdf-item-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 7px; }
+#pdfDocument .pdf-item-heading strong, #pdfDocument .pdf-item > strong { color: #173746; font-size: 8.2pt; font-weight: 700; line-height: 1.35; overflow-wrap: anywhere; }
+#pdfDocument .pdf-item-heading span { flex-shrink: 0; color: #647782; font-size: 7.3pt; font-weight: 700; }
+#pdfDocument .pdf-item p { margin: 2px 0; color: #52636c; font-size: 7.7pt; line-height: 1.35; overflow-wrap: anywhere; }
+#pdfDocument .pdf-item p strong { color: #263746; }
+#pdfDocument .pdf-footer { margin-top: 9px; padding-top: 5px; border-top: 1px solid #d5dde1; color: #87949b; font-size: 7pt; text-align: right; }
+#pdfDocument img { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+@page { size: A4 portrait; margin: 0; }
 @media print {
-
-    html,
-    body {
-        width: 210mm !important;
-        height: 297mm !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: #ffffff !important;
-    }
-
-    body {
-        overflow: hidden !important;
-        print-color-adjust: exact !important;
-        -webkit-print-color-adjust: exact !important;
-    }
-
-    body * {
-        visibility: hidden !important;
-    }
-
-    #pdfDocument,
-    #pdfDocument * {
-        visibility: visible !important;
-    }
-
-    #pdfDocument {
-        display: block !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 210mm !important;
-        height: 297mm !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-        background: #ffffff !important;
-    }
-
-    #pdfDocument .pdf-page {
-        width: 210mm !important;
-        height: 297mm !important;
-        min-height: 297mm !important;
-        max-height: 297mm !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-        box-sizing: border-box !important;
-        page-break-after: avoid !important;
-        break-after: avoid !important;
-    }
-
-    #pdfDocument .pdf-content {
-        transform-origin: top left !important;
-    }
-
-    .pdf-download {
-        display: none !important;
-    }
+    html, body { width: 210mm !important; height: 297mm !important; margin: 0 !important; padding: 0 !important; background: #ffffff !important; }
+    body { overflow: hidden !important; print-color-adjust: exact !important; -webkit-print-color-adjust: exact !important; }
+    body * { visibility: hidden !important; }
+    #pdfDocument, #pdfDocument * { visibility: visible !important; }
+    #pdfDocument { display: block !important; position: absolute !important; top: 0 !important; left: 0 !important; width: 210mm !important; height: 297mm !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: #ffffff !important; }
+    #pdfDocument .pdf-page { width: 210mm !important; height: 297mm !important; min-height: 297mm !important; max-height: 297mm !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; box-sizing: border-box !important; page-break-after: avoid !important; break-after: avoid !important; }
+    #pdfDocument .pdf-content { transform-origin: top left !important; }
+    .pdf-download { display: none !important; }
 }
-
-/* =========================================================
-   PERBAIKAN PDF CV - A4 SATU HALAMAN
-   Khusus dokumen PDF, tidak mengubah tampilan website
-   ========================================================= */
-
-#pdfDocument {
-    width: 210mm;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: #263746;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#pdfDocument .pdf-page {
-    position: relative;
-    width: 210mm;
-    height: 297mm;
-    min-height: 297mm;
-    max-height: 297mm;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-#pdfDocument .pdf-content {
-    display: grid;
-    grid-template-columns: 34% 66%;
-    align-items: start;
-    width: 210mm;
-    min-height: 0;
-    height: auto;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 7pt;
-    line-height: 1.2;
-    background: #ffffff;
-}
-
-#pdfDocument .pdf-sidebar {
-    min-width: 0;
-    padding: 7mm 5mm;
-    box-sizing: border-box;
-    background: #0b3545;
-    color: #ffffff;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-main {
-    min-width: 0;
-    padding: 7mm 7mm;
-    box-sizing: border-box;
-    background: #ffffff;
-    color: #263746;
-    overflow-wrap: anywhere;
-}
-
-/* IDENTITAS */
-
-#pdfDocument .pdf-profile {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#pdfDocument .pdf-photo {
-    width: 27mm;
-    height: 33mm;
-    margin: 0 auto 9px;
-    overflow: hidden;
-    border: 2px solid #c9f31d;
-    border-radius: 3px;
-    background: #ffffff;
-}
-
-#pdfDocument .pdf-photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#pdfDocument .pdf-name {
-    margin: 0 0 4px;
-    color: #ffffff;
-    font-size: 15pt;
-    line-height: 1.12;
-    font-weight: 800;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-role {
-    margin: 0 0 5px;
-    color: #c9f31d;
-    font-size: 8pt;
-    line-height: 1.2;
-}
-
-#pdfDocument .pdf-headline {
-    margin: 4px 0 7px;
-    color: #ffffff;
-    font-size: 6.5pt;
-    line-height: 1.3;
-}
-
-#pdfDocument .pdf-identity {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    font-size: 6.5pt;
-    line-height: 1.25;
-}
-
-/* BAGIAN SIDEBAR */
-
-#pdfDocument .pdf-side-section {
-    margin: 0 0 8px;
-    padding: 0;
-}
-
-#pdfDocument .pdf-side-section h2 {
-    margin: 0 0 5px;
-    padding-bottom: 3px;
-    border-bottom: 1px solid rgba(255,255,255,0.45);
-    color: #c9f31d;
-    font-size: 7.5pt;
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-#pdfDocument .pdf-side-section p {
-    margin: 0 0 3px;
-    color: #ffffff;
-    font-size: 6.5pt;
-    line-height: 1.25;
-}
-
-#pdfDocument .pdf-contact-item {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    margin-bottom: 5px;
-    color: #ffffff;
-    font-size: 6.3pt;
-    line-height: 1.2;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-contact-item strong {
-    color: #c9f31d;
-    font-size: 6.5pt;
-}
-
-#pdfDocument .pdf-contact-item span {
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-list {
-    margin: 0;
-    padding-left: 12px;
-    color: #ffffff;
-    font-size: 6.5pt;
-    line-height: 1.25;
-}
-
-#pdfDocument .pdf-list li {
-    margin-bottom: 2px;
-    padding-left: 1px;
-}
-
-/* BAGIAN KONTEN KANAN */
-
-#pdfDocument .pdf-section {
-    margin: 0 0 7px;
-    padding: 0;
-    page-break-inside: auto;
-    break-inside: auto;
-}
-
-#pdfDocument .pdf-section h2 {
-    margin: 0 0 5px;
-    padding-bottom: 3px;
-    border-bottom: 1.2px solid #c9d2d8;
-    color: #0b4a5e;
-    font-size: 8.5pt;
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-#pdfDocument .pdf-section p {
-    margin: 0 0 3px;
-    color: #263746;
-    font-size: 6.7pt;
-    line-height: 1.25;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-item {
-    margin: 0 0 5px;
-    padding: 0;
-    page-break-inside: avoid;
-    break-inside: avoid;
-}
-
-#pdfDocument .pdf-item-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 5px;
-    margin-bottom: 2px;
-}
-
-#pdfDocument .pdf-item-heading strong {
-    flex: 1;
-    min-width: 0;
-    color: #263746;
-    font-size: 7pt;
-    line-height: 1.2;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-item-heading span {
-    flex-shrink: 0;
-    color: #647582;
-    font-size: 6.2pt;
-    line-height: 1.2;
-    white-space: nowrap;
-}
-
-#pdfDocument .pdf-item p {
-    margin: 0 0 2px;
-    color: #465765;
-    font-size: 6.5pt;
-    line-height: 1.22;
-    overflow-wrap: anywhere;
-}
-
-#pdfDocument .pdf-footer {
-    margin-top: 6px;
-    padding-top: 4px;
-    border-top: 1px solid #c9d2d8;
-    color: #647582;
-    font-size: 6pt;
-    line-height: 1.2;
-    text-align: right;
-}
-
-/* CETAK PDF */
-
-@page {
-    size: A4 portrait;
-    margin: 0;
-}
-
+#pdfDocument { width: 210mm; margin: 0; padding: 0; background: #ffffff; color: #263746; font-family: Arial, Helvetica, sans-serif; }
+#pdfDocument .pdf-page { position: relative; width: 210mm; height: 297mm; min-height: 297mm; max-height: 297mm; margin: 0; padding: 0; box-sizing: border-box; overflow: hidden; background: #ffffff; }
+#pdfDocument .pdf-content { display: grid; grid-template-columns: 34% 66%; align-items: start; width: 210mm; min-height: 0; height: auto; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; font-size: 7pt; line-height: 1.2; background: #ffffff; }
+#pdfDocument .pdf-sidebar { min-width: 0; padding: 7mm 5mm; box-sizing: border-box; background: #0b3545; color: #ffffff; overflow-wrap: anywhere; }
+#pdfDocument .pdf-main { min-width: 0; padding: 7mm 7mm; box-sizing: border-box; background: #ffffff; color: #263746; overflow-wrap: anywhere; }
+#pdfDocument .pdf-profile { margin-bottom: 10px; text-align: center; }
+#pdfDocument .pdf-photo { width: 27mm; height: 33mm; margin: 0 auto 9px; overflow: hidden; border: 2px solid #c9f31d; border-radius: 3px; background: #ffffff; }
+#pdfDocument .pdf-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#pdfDocument .pdf-name { margin: 0 0 4px; color: #ffffff; font-size: 15pt; line-height: 1.12; font-weight: 800; overflow-wrap: anywhere; }
+#pdfDocument .pdf-role { margin: 0 0 5px; color: #c9f31d; font-size: 8pt; line-height: 1.2; }
+#pdfDocument .pdf-headline { margin: 4px 0 7px; color: #ffffff; font-size: 6.5pt; line-height: 1.3; }
+#pdfDocument .pdf-identity { display: flex; flex-direction: column; gap: 3px; font-size: 6.5pt; line-height: 1.25; }
+#pdfDocument .pdf-side-section { margin: 0 0 8px; padding: 0; }
+#pdfDocument .pdf-side-section h2 { margin: 0 0 5px; padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,0.45); color: #c9f31d; font-size: 7.5pt; line-height: 1.2; font-weight: 700; }
+#pdfDocument .pdf-side-section p { margin: 0 0 3px; color: #ffffff; font-size: 6.5pt; line-height: 1.25; }
+#pdfDocument .pdf-contact-item { display: flex; flex-direction: column; gap: 1px; margin-bottom: 5px; color: #ffffff; font-size: 6.3pt; line-height: 1.2; overflow-wrap: anywhere; }
+#pdfDocument .pdf-contact-item strong { color: #c9f31d; font-size: 6.5pt; }
+#pdfDocument .pdf-contact-item span { overflow-wrap: anywhere; }
+#pdfDocument .pdf-list { margin: 0; padding-left: 12px; color: #ffffff; font-size: 6.5pt; line-height: 1.25; }
+#pdfDocument .pdf-list li { margin-bottom: 2px; padding-left: 1px; }
+#pdfDocument .pdf-section { margin: 0 0 7px; padding: 0; page-break-inside: auto; break-inside: auto; }
+#pdfDocument .pdf-section h2 { margin: 0 0 5px; padding-bottom: 3px; border-bottom: 1.2px solid #c9d2d8; color: #0b4a5e; font-size: 8.5pt; line-height: 1.2; font-weight: 700; }
+#pdfDocument .pdf-section p { margin: 0 0 3px; color: #263746; font-size: 6.7pt; line-height: 1.25; overflow-wrap: anywhere; }
+#pdfDocument .pdf-item { margin: 0 0 5px; padding: 0; page-break-inside: avoid; break-inside: avoid; }
+#pdfDocument .pdf-item-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 5px; margin-bottom: 2px; }
+#pdfDocument .pdf-item-heading strong { flex: 1; min-width: 0; color: #263746; font-size: 7pt; line-height: 1.2; overflow-wrap: anywhere; }
+#pdfDocument .pdf-item-heading span { flex-shrink: 0; color: #647582; font-size: 6.2pt; line-height: 1.2; white-space: nowrap; }
+#pdfDocument .pdf-item p { margin: 0 0 2px; color: #465765; font-size: 6.5pt; line-height: 1.22; overflow-wrap: anywhere; }
+#pdfDocument .pdf-footer { margin-top: 6px; padding-top: 4px; border-top: 1px solid #c9d2d8; color: #647582; font-size: 6pt; line-height: 1.2; text-align: right; }
+@page { size: A4 portrait; margin: 0; }
 @media print {
-    html,
-    body {
-        width: 210mm !important;
-        height: 297mm !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-    }
-
-    #pdfDocument {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        display: block !important;
-        width: 210mm !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    #pdfDocument .pdf-page {
-        width: 210mm !important;
-        height: 297mm !important;
-        min-height: 297mm !important;
-        max-height: 297mm !important;
-        overflow: hidden !important;
-    }
-
-    .pdf-download {
-        display: none !important;
-    }
+    html, body { width: 210mm !important; height: 297mm !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; }
+    #pdfDocument { position: absolute !important; top: 0 !important; left: 0 !important; display: block !important; width: 210mm !important; margin: 0 !important; padding: 0 !important; }
+    #pdfDocument .pdf-page { width: 210mm !important; height: 297mm !important; min-height: 297mm !important; max-height: 297mm !important; overflow: hidden !important; }
+    .pdf-download { display: none !important; }
 }
+
 /* =========================================================
-   FIX NAVBAR: RAPI, BERSIH, TANPA KOTAK
-   Tambahkan di paling bawah style.css
+   PATCH FINAL: SEMUA FIX DITUMPUK DI SINI
    ========================================================= */
 
-/* 1. Hilangkan background kotak hijau (pill) yang lama */
-.pill {
-    display: none !important;
-}
+/* 1. NAVBAR & HEADER RAPI */
+.pill { display: none !important; }
+nav ul { display: flex; align-items: center; gap: 28px; padding: 0; margin: 0; list-style: none; }
+nav a { position: relative; display: inline-block; padding: 8px 0 !important; font: 700 .8rem var(--fd) !important; text-transform: uppercase; letter-spacing: .08em; text-decoration: none; color: var(--ink); opacity: 0.7; transition: opacity .3s ease, color .3s ease; }
+nav a:hover, nav a.on { opacity: 1; color: var(--ink); background: transparent !important; }
+nav a::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background: var(--lime); transform: scaleX(0); transform-origin: right; transition: transform .35s cubic-bezier(.22, 1, .36, 1); }
+nav a:hover::after, nav a.on::after { transform: scaleX(1); transform-origin: left; }
+header { padding-inline: 20px; }
+.bar { display: flex; align-items: center; gap: 16px; height: 68px; width: 100%; max-width: 1280px; margin: 0 auto; }
+.logo { display: flex !important; flex-direction: column; justify-content: center; line-height: 0.8 !important; font-size: 1.5rem !important; font-style: normal !important; letter-spacing: -0.02em; margin-right: auto; transform: skewX(0) !important; }
+.modebtn { height: 38px; padding: 0 16px; font-size: 0.75rem !important; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; border-radius: 4px; border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent) !important; background: transparent !important; transition: all .3s ease; flex-shrink: 0; margin-right: 12px; }
+.modebtn:hover { background: var(--ink) !important; color: var(--bg) !important; border-color: var(--ink) !important; }
+.pdf-download { height: 38px !important; padding: 0 16px !important; font-size: 0.75rem !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; white-space: nowrap !important; border-radius: 4px !important; flex-shrink: 0 !important; margin-left: 10px; }
+nav a { font-size: 0.75rem !important; padding: 8px 0 !important; }
+nav ul { gap: 18px !important; }
 
-/* 2. Rapikan layout link navigasi */
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 28px; /* Jarak antar menu lebih lega */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+/* 2. TEKS ROLE */
+.role { font-family: var(--fb) !important; font-size: clamp(1rem, 1.5vw, 1.2rem) !important; font-weight: 600 !important; letter-spacing: 0 !important; text-decoration: none !important; text-transform: uppercase !important; line-height: 1.4 !important; margin: 4px 0 20px 0 !important; color: var(--lime) !important; display: block; max-width: 90% !important; }
 
-/* 3. Gaya teks menu (bersih tanpa border/kotak) */
-nav a {
-    position: relative;
-    display: inline-block;
-    padding: 8px 0 !important; /* Hapus padding kotak, sisakan padding atas-bawah */
-    font: 700 .8rem var(--fd) !important;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    text-decoration: none;
-    color: var(--ink);
-    opacity: 0.7; /* Sedikit transparan saat tidak aktif */
-    transition: opacity .3s ease, color .3s ease;
-}
+/* 3. FOTO HERO (LINGKARAN) */
+.hero .wrap { align-items: end; }
+.photo { height: min(60vh, 540px) !important; align-self: end !important; transform: translateY(-30px) !important; z-index: 1 !important; border-radius: 50% !important; overflow: hidden !important; display: grid !important; place-items: center !important; }
+.frame { width: 100% !important; height: 100% !important; border-radius: 50% !important; overflow: hidden !important; }
+.frame > img { width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 50% !important; }
+.photo::before { display: none !important; }
+.hero h1 { position: relative; z-index: 2 !important; margin-bottom: 20px !important; }
+#photo > *:not(.frame) { display: none !important; }
 
-/* 4. Hover & Active State (Garis bawah animasi) */
-nav a:hover,
-nav a.on {
-    opacity: 1;
-    color: var(--ink);
-    background: transparent !important; /* Paksa hilangkan background hijau */
-}
+/* 4. EFEK HOVER FOTO (KACA BUram) */
+.hero .photo { position: relative !important; }
+.hero .photo::after { content: "" !important; position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; background-color: rgba(11, 74, 94, 0.7) !important; border-radius: 50% !important; z-index: 10 !important; pointer-events: none !important; transition: opacity 0.5s ease !important; opacity: 1 !important; }
+.hero .photo:hover::after { opacity: 0 !important; }
+.hero .photo:hover { transform: scale(1.02) !important; transition: transform 0.5s ease, box-shadow 0.5s ease !important; box-shadow: 0 0 30px rgba(201, 243, 29, 0.6) !important; }
 
-/* Garis bawah (underline) animasi */
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--lime);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform .35s cubic-bezier(.22, 1, .36, 1);
-}
+/* 5. FOOTER */
+footer { text-align: center !important; }
+footer .wrap { display: flex !important; flex-direction: column !important; align-items: center !important; }
+footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0.85 !important; margin-bottom: 30px !important; margin-top: 10px !important; word-break: break-word !important; padding: 0 10px !important; text-align: center !important; width: 100% !important; display: block !important; margin-left: auto !important; margin-right: auto !important; }
 
-nav a:hover::after,
-nav a.on::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* 5. Rapikan tombol BALIK WARNA (Mode Toggle) agar tidak kaku */
-.modebtn {
-    border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent) !important;
-    background: transparent !important;
-    padding: 8px 16px;
-    border-radius: 4px; /* Sedikit rounded agar modern */
-    transition: all .3s ease;
-}
-
-.modebtn:hover {
-    background: var(--ink) !important;
-    color: var(--bg) !important;
-    border-color: var(--ink) !important;
-}
-
-/* 6. Tombol DOWNLOAD CV (tetap menonjol tapi lebih rapih) */
-.pdf-download {
-    border-radius: 4px !important; /* Samakan rounded-nya */
-}
-
-/* 7. Responsive Mobile (Menu Dropdown) */
+/* =========================================================
+   6. PERBAIKAN KHUSUS MOBILE (HP)
+   ========================================================= */
 @media (max-width: 900px) {
-    nav ul {
-        gap: 12px;
-        padding: 20px 24px;
-    }
+    /* Navbar Mobile */
+    .bar { gap: 8px; }
+    #menu { display: block; }
+    nav ul { flex-direction: column; padding: 10px 24px 18px; gap: 12px; }
+    nav a { display: block; padding: 12px 0 !important; font-size: 1rem !important; }
+    nav a::after { bottom: 6px; }
+    .logo { display: inline-block !important; font-size: 1.4rem !important; margin-right: auto; }
+    .logo br { display: none; }
+    .bar { justify-content: space-between; }
+    .pdf-download { padding: 9px 10px; font-size: .65rem; }
+    .modebtn { padding: 0 10px; font-size: .65rem; }
+
+    /* Hero Mobile */
+    section { padding: 50px 0; }
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; gap: 0; align-items: stretch; }
+    .copy { grid-area: auto; padding: 30px 0 0; text-align: center; }
+    .hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem) !important; line-height: 1.1 !important; margin-bottom: 15px !important; }
+    .role { max-width: 100% !important; font-size: 1rem !important; text-align: center; margin: 10px auto 20px !important; }
+    .sum { font-size: 0.95rem !important; text-align: center; margin: 0 auto 20px !important; }
+    .cta { justify-content: center !important; gap: 12px !important; }
+    .btn, .down { transform: none !important; }
+
+    /* Foto Mobile */
+    .hero .photo { transform: none !important; height: 300px !important; width: 300px !important; margin: 20px auto !important; align-self: center !important; }
+    .hero .photo::after { opacity: 0.6 !important; } /* Lebih terang di HP */
+    .hero .photo:active::after { opacity: 0 !important; } /* Efek sentuh */
+    .hero .photo:active { transform: scale(0.98) !important; box-shadow: 0 0 20px rgba(201, 243, 29, 0.8) !important; }
+
+    /* Sidebar Mobile (Tumpuk biasa) */
+    .side { grid-area: auto; padding: 20px 0 40px; text-align: left; }
+    .sb { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; }
+
+    /* About Mobile */
+    .about { grid-template-columns: 1fr; gap: 30px; }
+    .lead { font-size: 1.3rem; }
+    .facts > div { padding: 15px 0; }
+
+    /* Timeline Mobile */
+    .tl li { grid-template-columns: 1fr; gap: 5px; padding: 20px 0; }
+    .tl .yr { grid-row: auto; font-size: 0.9rem; }
+
+    /* Portfolio & Certs Mobile */
+    .proj, .certs { grid-template-columns: 1fr; gap: 20px; }
+    .cover { height: 160px; }
+    .pb { padding: 20px; }
+
+    /* Contact Mobile */
+    .ct li { flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px 0; }
+    .ct b { min-width: 0; font-size: 1.5rem; }
+    .ct span { min-width: 0; font-size: 0.9rem; }
     
-    nav a {
-        display: block;
-        padding: 12px 0 !important;
-        font-size: 1rem !important;
-    }
-    
-    /* Garis bawah versi mobile */
-    nav a::after {
-        bottom: 6px;
-    }
-}
-/* =========================================================
-   FIX HEADER: LOGO E-CV & TOMBOL DOWNLOAD CV
-   Tambahkan di paling bawah style.css
-   ========================================================= */
-
-/* 1. Perbaiki Logo E-CV */
-.logo {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 0.85 !important; /* Merapatkan baris atas & bawah */
-    font-size: 1.6rem !important;
-    font-style: normal !important; /* Hilangkan miring agar lebih formal */
-    letter-spacing: -0.02em;
-    transform: skewX(0) !important; /* Matikan efek miring saat hover */
-    margin-right: 24px; /* Beri jarak aman ke tombol Balik Warna */
-}
-
-/* 2. Perbaiki Tombol BALIK WARNA agar sejajar */
-.modebtn {
-    height: 40px; /* Kunci tingginya */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Cegah teks turun ke bawah */
-    margin-right: 12px; /* Jarak ke menu Home */
-}
-
-/* 3. Perbaiki Tombol DOWNLOAD CV */
-.pdf-download {
-    height: 40px !important; /* Samakan tingginya dengan tombol lain */
-    padding: 0 20px !important; /* Padding horizontal saja */
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap; /* Cegah teks turun ke bawah */
-    border-radius: 4px !important; /* Samakan rounded dengan tombol Balik Warna */
-    font-size: 0.8rem !important;
-    line-height: 1 !important; /* Rapikan teks di dalam tombol */
-}
-
-/* 4. Pastikan semua item di navbar sejajar secara vertikal */
-.bar {
-    align-items: center !important;
-}
-
-/* 5. Responsive Mobile: Kembalikan logo ke samping agar hemat tempat */
-@media (max-width: 900px) {
-    .logo {
-        display: inline-block !important;
-        font-size: 1.4rem !important;
-        margin-right: auto; /* Dorong menu ke kanan */
-    }
-    
-    .logo br {
-        display: none; /* Jika di HTML ada <br>, sembunyikan di mobile */
-    }
-    
-    .bar {
-        justify-content: space-between;
-    }
-}
-/* =========================================================
-   FIX NAVBAR FINAL: ANTI-TERPOTONG & RAPI
-   ========================================================= */
-
-/* 1. Atur wadah utama navbar agar sejajar ke tengah */
-header {
-    padding-inline: 20px; /* Beri jarak aman di kiri-kanan layar */
-}
-
-.bar {
-    display: flex;
-    align-items: center;
-    gap: 16px; /* Jarak antar blok (logo, tombol, menu) */
-    height: 68px;
-    width: 100%;
-    max-width: 1280px; /* Batasi lebar maksimal agar tidak melebar keluar */
-    margin: 0 auto;
-}
-
-/* 2. Perbaiki Logo E-CV */
-.logo {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 0.8 !important; 
-    font-size: 1.5rem !important; /* Sedikit dikecilkan */
-    font-style: normal !important;
-    letter-spacing: -0.02em;
-    margin-right: auto; /* Dorong menu ke kanan */
-}
-
-/* 3. Rapikan menu navigasi (tulisan tengah) */
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 18px !important; /* Jarak antar menu dirapatkan */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-nav a {
-    font-size: 0.75rem !important; /* Font menu dikecilkan sedikit */
-    padding: 8px 0 !important;
-}
-
-/* 4. Tombol BALIK WARNA (Kiri) */
-.modebtn {
-    height: 38px;
-    padding: 0 16px;
-    font-size: 0.75rem !important;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent) !important;
-    background: transparent !important;
-    transition: all .3s ease;
-    flex-shrink: 0; /* Jangan biarkan mengecil */
-}
-
-.modebtn:hover {
-    background: var(--ink) !important;
-    color: var(--bg) !important;
-    border-color: var(--ink) !important;
-}
-
-/* 5. Tombol DOWNLOAD CV (Kanan) - Kunci agar tidak terpotong */
-.pdf-download {
-    height: 38px !important;
-    padding: 0 16px !important;
-    font-size: 0.75rem !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    white-space: nowrap !important;
-    border-radius: 4px !important;
-    flex-shrink: 0 !important; /* Mencegah tombol gepeng/terpotong */
-    margin-left: 10px;
-}
-
-/* 6. Responsif untuk layar agak kecil (Laptop 13 inch) */
-@media (max-width: 1200px) {
-    nav ul {
-        gap: 12px !important; /* Rapatkan menu lagi jika layar mulai sempit */
-    }
-    
-    nav a {
-        font-size: 0.7rem !important;
-        letter-spacing: 0.04em !important;
-    }
-    
-    .modebtn, .pdf-download {
-        padding: 0 10px !important;
-        font-size: 0.7rem !important;
-    }
-}
-
-/* =========================================================
-   FIX TEKS "MAHASISWA SISTEM INFORMASI" (ROLE)
-   ========================================================= */
-
-.role {
-    /* Gunakan font body biasa agar tidak terlalu kaku/tebal */
-    font-family: var(--fb) !important; 
-    
-    /* Perkecil ukuran font agar proporsional */
-    font-size: clamp(1rem, 1.5vw, 1.2rem) !important; 
-    font-weight: 600 !important;
-    
-    /* Hilangkan spasi antar huruf yang terlalu lebar (tracking) */
-    letter-spacing: 0 !important; 
-    
-    /* Hilangkan garis bawah (underline) jika ada */
-    text-decoration: none !important; 
-    text-transform: uppercase !important; 
-    
-    /* Atur jarak dan warna */
-    line-height: 1.4 !important;
-    margin: 4px 0 20px 0 !important;
-    color: var(--lime) !important;
-    display: block;
-}
-
-/* =========================================================
-   FIX FINAL: PENEMPATAN FOTO HERO AGAR SEJAJAR DENGAN NAMA
-   ========================================================= */
-
-.hero .wrap {
-    align-items: end; /* Konten menempel ke bawah */
-}
-
-.photo {
-    height: min(60vh, 540px) !important; /* Sesuaikan tinggi foto */
-    align-self: end !important;         /* Foto menempel di bawah */
-    transform: translateY(-40px) !important; /* Angka negatif menarik foto KE ATAS agar sejajar dengan nama */
-    z-index: 1 !important;              
-}
-
-/* Pastikan teks nama (h1) tetap di atas foto */
-.hero h1 {
-    position: relative;
-    z-index: 2 !important;              
-    margin-bottom: 20px !important;
-}
-
-/* Di layar kecil/mobile, kembalikan foto ke posisi normal */
-@media (max-width: 900px) {
-    .photo {
-        transform: none !important;
-        height: 360px !important;
-        margin-top: 20px !important;
-    }
-    
-    .hero .wrap {
-        align-items: stretch; 
-    }
-}
-/* Menyembunyikan sisa kotak putih dari JavaScript di bawah foto */
-#photo > *:not(.frame) {
-    display: none !important;
-}
-.photo {
-    height: min(60vh, 540px) !important; 
-    align-self: end !important;         
-    transform: translateY(-200px) !important; /* <--- UBAH ANGKA INI (sebelumnya -40px) */
-    z-index: 1 !important;              
-}
-/* =========================================================
-   FIX FINAL: PENEMPATAN FOTO HERO (FOTO MASUK KE DALAM LINGKARAN)
-   ========================================================= */
-
-.hero .wrap {
-    align-items: end; 
-}
-
-.photo {
-    height: min(60vh, 540px) !important; 
-    align-self: end !important;         
-    transform: translateY(-130px) !important; /* Posisi naiknya disesuaikan */
-    z-index: 1 !important; 
-    
-    /* KUNCI UTAMA: Paksa wadah foto jadi lingkaran */
-    border-radius: 50% !important;
-    overflow: hidden !important; 
-    
-    /* Memastikan lingkaran hijau tetap sejajar di belakang foto */
-    display: grid !important;
-    place-items: center !important;
-}
-
-/* Pastikan frame (pembungkus gambar) juga ikut jadi lingkaran */
-.frame {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-}
-
-/* Paksa gambar mengisi penuh lingkaran tanpa gepeng */
-.frame > img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-}
-
-/* Sembunyikan lingkaran hijau versi lama (::before) agar tidak dobel */
-.photo::before {
-    display: none !important; 
-}
-
-/* Pastikan teks nama (h1) tetap di atas foto */
-.hero h1 {
-    position: relative;
-    z-index: 2 !important;              
-    margin-bottom: 20px !important;
-}
-
-/* Di layar kecil/mobile */
-@media (max-width: 900px) {
-    .photo {
-        transform: none !important;
-        height: 300px !important; /* Sesuaikan tinggi di HP */
-        width: 300px !important;  /* Lebar disamakan agar bulat sempurna */
-        margin: 20px auto !important;
-    }
-    
-    .hero .wrap {
-        align-items: stretch; 
-    }
-}
-/* =========================================================
-   FIX FOOTER: MERAPIKAN TEKS BESAR AGAR TIDAK KEPOTONG
-   ========================================================= */
-
-footer .bigname {
-    /* Perkecil ukuran font maksimal dari 10.5rem jadi 7rem */
-    font-size: clamp(2.5rem, 8vw, 7rem) !important; 
-    
-    /* Atur jarak agar tidak terlalu rapat ke atas/bawah */
-    line-height: 0.85 !important;
-    margin-bottom: 30px !important;
-    margin-top: 10px !important;
-    
-    /* Pastikan teks turun ke baris baru jika terlalu panjang */
-    word-break: break-word !important; 
-    
-    /* Beri sedikit ruang di kiri-kanan */
-    padding: 0 10px !important;
-}
-/* =========================================================
-   FIX FOOTER: TEKS BESAR RATA TENGAH
-   ========================================================= */
-
-footer {
-    text-align: center !important; /* Rata tengah untuk seluruh isi footer */
-}
-
-footer .wrap {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* Paksa isi footer ke tengah secara horizontal */
-}
-
-footer .bigname {
-    text-align: center !important; /* Pastikan teks besarnya rata tengah */
-    width: 100% !important;
-    display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-.photo {
-    height: min(60vh, 540px) !important; 
-    align-self: end !important;         
-    transform: translateY(10px) !important; /* <--- UBAH ANGKA INI */
-    z-index: 1 !important;              
+    /* Sembunyikan kursor custom */
+    #cur, #cur-dot { display: none !important; }
 }
