@@ -3270,6 +3270,6 @@ footer .bigname {
 .photo {
     height: min(60vh, 540px) !important; 
     align-self: end !important;         
-    transform: translateY(-80px) !important; /* <--- UBAH ANGKA INI */
+    transform: translateY(10px) !important; /* <--- UBAH ANGKA INI */
     z-index: 1 !important;              
 }
