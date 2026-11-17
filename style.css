@@ -3333,3 +3333,88 @@ footer .bigname {
         display: none !important;
     }
 }
+/* =========================================================
+   SIDEBAR MOBILE (LACI GESER)
+   ========================================================= */
+
+/* Sembunyikan tombol di Desktop */
+.mobile-side-btn, .mobile-close-btn {
+    display: none;
+}
+
+/* Hanya aktif di HP / Layar Kecil */
+@media (max-width: 900px) {
+    
+    /* Tampilkan tombol pembuka */
+    .mobile-side-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 20px 0;
+        padding: 10px 18px;
+        background: var(--lime);
+        color: var(--pd);
+        font: 800 .8rem var(--fd);
+        text-transform: uppercase;
+        border: 2px solid var(--pd);
+        border-radius: 4px;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    /* Ubah sidebar menjadi laci (drawer) */
+    .side {
+        position: fixed !important;
+        top: 0;
+        right: -100%; /* Sembunyikan di kanan layar */
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--bg);
+        z-index: 9999;
+        padding: 60px 24px 24px 24px !important;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.3);
+        transition: right 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        overflow-y: auto;
+        display: block !important; /* Timpa display flex bawaan */
+    }
+
+    /* Kelas aktif saat sidebar dibuka */
+    .side.active {
+        right: 0;
+    }
+
+    /* Tombol tutup (X) di dalam sidebar */
+    .mobile-close-btn {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        background: transparent;
+        border: 2px solid var(--ink);
+        font-size: 1.5rem;
+        line-height: 1;
+        color: var(--ink);
+        cursor: pointer;
+        border-radius: 4px;
+        display: grid;
+        place-items: center;
+    }
+
+    /* Bayangan gelap di belakang sidebar saat terbuka */
+    .side-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(5, 44, 57, 0.7);
+        z-index: 9998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+    .side-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
