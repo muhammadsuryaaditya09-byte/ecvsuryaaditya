@@ -22,6 +22,16 @@
 </head>
 
 <body>
+    <div id="loader" aria-hidden="true">
+    <div class="ld-half ld-top"></div>
+    <div class="ld-half ld-bot"></div>
+    <div class="ld-center">
+        <div class="ld-tag"><i></i>Loading</div>
+        <div class="ld-logo"><span>E</span><span>-</span><span>C</span><span>V</span></div>
+        <div class="ld-bar"><i></i></div>
+        <div class="ld-meta"><span>Muhammad Surya Aditya</span><b class="ld-pct">0%</b></div>
+    </div>
+</div>
 
     <noscript>
         <p class="note">
@@ -460,6 +470,45 @@
     <!-- JAVASCRIPT -->
     <script src="data.js" defer></script>
     <script src="script.js" defer></script>
+
+    <script>
+(function () {
+    var ld = document.getElementById('loader');
+    if (!ld) return;
+    var pct = ld.querySelector('.ld-pct');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var MIN = reduce ? 200 : 1600;
+    var start = performance.now(), p = 0, loaded = false, finished = false;
+
+    function set(v) {
+        ld.style.setProperty('--ld', v.toFixed(1));
+        pct.textContent = Math.round(v) + '%';
+    }
+
+    function finish() {
+        finished = true;
+        set(100);
+        setTimeout(function () {
+            ld.classList.add('done');
+            setTimeout(function () { ld.classList.add('gone'); }, 1500);
+        }, 250);
+    }
+
+    function tick(now) {
+        if (finished) return;
+        var t = now - start;
+        var target = (loaded && t >= MIN) ? 100 : Math.min(90, t / MIN * 90);
+        p += (target - p) * 0.12;
+        if (p > 99.4) return finish();
+        set(p);
+        requestAnimationFrame(tick);
+    }
+
+    if (document.readyState === 'complete') loaded = true;
+    else window.addEventListener('load', function () { loaded = true; });
+    requestAnimationFrame(tick);
+})();
+</script>
 
 
 </body>

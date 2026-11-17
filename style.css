@@ -1124,3 +1124,160 @@ footer .bigname { font-size: clamp(2.5rem, 8vw, 7rem) !important; line-height: 0
     .copy select,
     .copy textarea { pointer-events: auto; }
 }
+
+/* =========================================================
+   LOADING SCREEN (PRELOADER) - tema navy + lime
+   Huruf E-CV terisi warna lime mengikuti progres, bar ikut naik,
+   lalu layar membelah ke atas dan bawah (curtain) membuka website.
+   ========================================================= */
+#loader {
+    --ld: 0;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: env(safe-area-inset-top, 0px) 24px env(safe-area-inset-bottom, 0px);
+    color: var(--ice);
+    font-family: var(--fb);
+    overflow: hidden;
+    /* pengaman: kalau JS gagal jalan, loader hilang sendiri setelah 8 detik */
+    animation: ld-failsafe .01s 8s forwards;
+}
+
+#loader.done { pointer-events: none; }
+#loader.gone { display: none; }
+
+@keyframes ld-failsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+
+#loader .ld-half {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50.2%;
+    background: var(--p);
+    transition: transform .9s cubic-bezier(.76, 0, .24, 1) .3s;
+}
+
+#loader .ld-half::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(55% 70% at 50% 50%, rgba(201, 243, 29, .10), transparent 70%),
+        repeating-linear-gradient(90deg, rgba(238, 246, 248, .04) 0 1px, transparent 1px 64px);
+    pointer-events: none;
+}
+
+#loader .ld-top { top: 0; border-bottom: 3px solid var(--lime); }
+#loader .ld-bot { bottom: 0; border-top: 3px solid var(--lime); }
+
+#loader.done .ld-top { transform: translateY(-101%); }
+#loader.done .ld-bot { transform: translateY(101%); }
+
+#loader .ld-center {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 460px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    transition: opacity .35s ease, transform .35s ease;
+}
+
+#loader.done .ld-center { opacity: 0; transform: translateY(-18px); }
+
+#loader .ld-tag {
+    font: 800 .74rem var(--fd);
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--lime);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#loader .ld-tag i {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--lime);
+    animation: ld-ping 1.6s ease-out infinite;
+}
+
+#loader .ld-logo {
+    display: flex;
+    justify-content: center;
+    font: 900 clamp(4.5rem, 22vw, 9rem)/1 var(--fd);
+    font-stretch: 125%;
+    font-style: italic;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+}
+
+#loader .ld-logo span {
+    --s: 0;
+    display: inline-block;
+    padding: 0 .02em;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--ice);
+    background: linear-gradient(var(--lime), var(--lime)) no-repeat left bottom / 100% clamp(0%, calc((var(--ld, 0) - var(--s)) * 4%), 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: ld-bob 1.2s ease-in-out infinite;
+}
+
+#loader .ld-logo span:nth-child(2) { --s: 25; animation-delay: .12s; }
+#loader .ld-logo span:nth-child(3) { --s: 50; animation-delay: .24s; }
+#loader .ld-logo span:nth-child(4) { --s: 75; animation-delay: .36s; }
+
+@keyframes ld-bob { 50% { transform: translateY(-8px); } }
+@keyframes ld-ping { 0% { box-shadow: 0 0 0 0 rgba(201, 243, 29, .7); } 100% { box-shadow: 0 0 0 12px transparent; } }
+
+#loader .ld-bar {
+    width: 100%;
+    height: 12px;
+    border: 2px solid var(--ice);
+    padding: 2px;
+}
+
+#loader .ld-bar i {
+    display: block;
+    height: 100%;
+    background: var(--lime);
+    transform: scaleX(calc(var(--ld, 0) / 100));
+    transform-origin: left;
+}
+
+#loader .ld-meta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    font: 800 .72rem var(--fd);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #a9c3cc;
+}
+
+#loader .ld-pct {
+    font: 900 1.6rem var(--fd);
+    font-stretch: 118%;
+    letter-spacing: -.02em;
+    color: var(--lime);
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+    #loader .ld-center { gap: 18px; }
+    #loader .ld-logo span { -webkit-text-stroke-width: 1.5px; }
+    #loader .ld-meta { font-size: .62rem; letter-spacing: .12em; }
+    #loader .ld-pct { font-size: 1.3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #loader .ld-logo span, #loader .ld-tag i { animation: none; }
+}
