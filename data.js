@@ -153,7 +153,7 @@ const DATA = {
         
         {
             t: "Sistem Informasi Penilaian Kinerja Guru berbasis Evidence",
-            d: "Website ini digunakan untuk menilai kinerja guru berdasarkan bukti.",
+            d: "Website ini digunakan untuk menilai kinerja guru berbasis evidence.",
             role: "membuat perancangan website, membuat erd dan lrs, membuat laporan akhir.",
             tools: "visual studio code, figma, mysql, phpmyadmin, xampp, Github",
             image: "images/fotosimpeg.jpeg",
